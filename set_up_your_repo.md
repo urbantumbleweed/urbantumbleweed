@@ -22,7 +22,7 @@ git clone YOUR_CLONE_URL
 For example mine would look like this:
 
 ```bash
-https://github.com/DrRobotmck/WDI_NYC_Feb14_Map.git
+git@github.com:DrRobotmck/WDI_NYC_Feb14_Map.git
 ```
 
 * cd into your `WDI_NYC_Feb14_Map` directory
@@ -41,7 +41,7 @@ git remote -v
 * Add our main repository as "upstream"
 
 ```bash
-git remote add upstream https://github.com/ga-students/WDI_NYC_Feb14_Map.git
+git remote add upstream git@github.com:ga-students/WDI_NYC_Feb14_Map.git
 ```
 
 * Verify you added the remote by typing:
