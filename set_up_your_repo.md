@@ -2,7 +2,7 @@
 
 ---
 
-##How to your Github class repo
+##How to setup your Github class repo
 ---
 
 * Make sure you have your [ssh keys set up](https://help.github.com/articles/generating-ssh-keys)
