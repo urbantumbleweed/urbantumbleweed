@@ -34,7 +34,7 @@ git pull upstream master
 
 #### Once you have compeleted your work:
 
-** Make a pull request **
+**Make a pull request**
 
 * Go to your own github account and make your pull request
 * You MUST title your pull request starting with hw_w**_submission
