@@ -3,51 +3,78 @@
 
 # Homework Submission Steps
 
-##Instructions in words
 
-* Open up a terminal window
-* Move to your local WDI_NYC_7_Work folder
-* Create a new branch for that day's homework
-* Pull from the upstream master
-* Do your work
-* Stage your changes
-* Commit your changes
-* Push your branch to origin
-* Make a pull request with a title starting with hw_w01_submission
-* Checkout your master branch
-* Pull from origin your development branch
-	* In this step, you are merging your development branch into your master branch
-* Push your master to your origin
-
-
-## Instructions in code
+* Open up a new terminal window
+* cd into your local WDI_NYC_Feb14_Map folder
 
 ```
-cd ~/Documents/ga_wdi/WDI_NYC_Feb14_Map
-git branch w03_d1
+cd ~/wdi/WDI_NYC_Feb14_Map
+```
+## Make sure you are on your master branch before you pull!!
+
+* Pull from upstream to master
+* You may need to close a merge/commit message.
+
+```
+git checkout master
+git branch
 git pull upstream master
 ```
+* cd into the folder for that week and day, view the files inside and cd into your name folder
 
-#### You may need to save and close a merge/commit message.
+```
+cd w01
+cd d01
+ls
+cd YOUR_NAME_FOLDER
+```
+* Create a new branch for that day's homework
 
-#### At this point, you do the work in your OWN folder.
+ ```
+ git branch hw_branch_w01_d01
+ git checkout hw_branch_w01_d01
+ git branch
+ ```
 
-#### Once you have compeleted your work:
+* Begin your assignment and make sure that you save the files you are working on. Also: 
+
+## Make sure you are working in your own folder!
+---
+#### Once you have completed your assignment: 
+* Stage your changes.
+
+```
+git status
+git add .
+git status
+```
+* Commit your changes and push your branch to origin
+
+```
+git commit -m "Completed assignment"
+git push origin hw_branch_w01_d01
+```
+#### Now go to Github and submit a pull request for your homework
+
 
 **Make a pull request**
 
 * Go to your own github account and make your pull request
-* You MUST title your pull request starting with hw_w**_submission
-* For example: "hw_w01_submission Complete Calculator HW"
-* You MUST inlucude comments on your successes and challenges
+* Your pull request should be submitted from your hw_branch to upstream master (ga-students:master)
+* You MUST title your pull request starting with hw_w01_d01
+* For example: "hw_w01_d01 Complete Calculator HW"
+* You MUST include comments on your comfortability with the assignment and level of completeness.
 
-#### Once you have made your pull request
 ```
-git add .
-git commit -m "Completed HW"
-git push origin w03_d1
-git checkout master
-git pull origin w03_d1
-git push origin master
+{
+"comfortability":"3",
+"completeness":"4"
+}
 ```
+
+**Once you have made your pull request**
+
+#####Get some rest! 
+* Relax, review, and prepare yourself for the next day of class.
+
 
