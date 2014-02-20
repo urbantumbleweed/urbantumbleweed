@@ -1,19 +1,17 @@
-## WDI Feb14 Map
-
 # Week 01
 
 ### Schedule
 
 |                    | Monday | Tuesday | Wednesday | Thursday | Friday |
-|:---                |:---    |: ---    |:---       |:---      |:---    |
+|:----------         |:-----  |:-----   |:---       |:---      |:---    |
 | Morning            | Mental Models, Computer Effectiveness, Command Line| Intro to Ruby, Datatypes, Variables, pry | Collections & Enumeration | String Manipulation & Regex | Objects |
 | Afternoon          | Git, GitHub | Control Flow | Methods | Multi-file Ruby | Objects, Classes, Inheritance |
 
 
 ### 1-on-1 Schedule
 
-| Week 1 |     | Monday | Tuesday | Wednesday | Thursday | Friday |
-|:---    |:--- |:---    |: ---    |:---       |:---      |:---    |
+|        |     | Monday | Tuesday | Wednesday | Thursday | Friday |
+|:---    |:--- |:---    |:---     |:---       |:---      |:---    |
 | McKenneth | 430-500 | James Ingallinera | Joshua Lieberman | Paul Lee | Verner D'Souza ||
 || 500-530 | Alexandra Shook | Tadashi Okazaki | Vincent Trivett | Stephen Saunders ||
 || 530-600 | Dave Miller |||||
