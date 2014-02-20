@@ -1,6 +1,8 @@
 ## WDI Feb14 Map
 
-# Week 01 1-on-1 Schedule
+# Week 01
+
+### 1-on-1 Schedule
 
 |Week 1| | Monday | Tuesday | Wednesday | Thursday | Friday |
 |---|---|---|---|---|---|---|
