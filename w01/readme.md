@@ -17,7 +17,7 @@
 || 530-600 | Dave Miller |||||
 | Hari | 430-500 | David Kim | Stephen Marsh | Jesse Sessler | Trinity Montoya ||
 || 500-530 | Jaime Cohenca | Lance Jordan | Ilana Seid | Nathan Plutzik ||
-|| 530-600 | Spencer Stebbins |||||
-| Adam | 430-500 | Tommy Threadcraft | Igor Yuzovitskiy | Paul Kovalski | Jason Leibowitz ||
+|| 530-600 ||||||
+| Adam | 430-500 | Tommy Threadcraft | Igor Yuzovitskiy | Spencer Stebbins | Jason Leibowitz ||
 || 500-530 | Derek DiGioia | Eric Resnick | Ash Kamel | Dan Morena ||
 || 530-600 ||||||
