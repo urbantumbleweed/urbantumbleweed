@@ -1,0 +1,23 @@
+- Name: Eric Resnick
+- Github Handle: eres805
+- Favorite Food: Fried Chicken
+- Spirit Animal: German Shepard
+- Favorite Song: Umphrey's McGee - Nothing too Fancy
+
+	first_ans = 3
+
+	puts first_ans = 3
+
+	print first_ans = 3
+
+	first_ans = 7 / 2.to_f = 3.5
+
+	first_ans = 7.to_f / 2 = 3.5
+
+	first_ans = 7 / 2.0 = 3.5
+
+	first_ans = 7.0 / 2 = 3.5
+
+	first_ans = first_ans.round * 4 = 16
+
+	
