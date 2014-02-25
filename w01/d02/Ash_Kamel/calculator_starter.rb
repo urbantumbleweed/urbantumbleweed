@@ -19,7 +19,8 @@ while initializer != "q"
 		puts num1 + num2
 	elsif operator == "s"
 		puts num1 - num2
-	
+	elsif operator == "d"
+		puts num1 / num2
 	else
 		puts "You didnt enter a valid operator or number"
 	end
