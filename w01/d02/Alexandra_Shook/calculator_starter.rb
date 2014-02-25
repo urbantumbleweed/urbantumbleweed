@@ -18,4 +18,6 @@ y = gets.chomp.to_i
 # Print out a statement with the result.
 if initializer == "a"
   puts "The answer is " + (x + y).to_s + "."
+elsif initializer == "s"
+  puts "The answer is " + (x - y).to_s + "."
 end
