@@ -1,0 +1,219 @@
+- Name: Joshua T. Lieberman
+- Github Handle: jlieb10
+- Favorite Food: Macaroni & cheese
+- Spirit Animal: Not sure, I like rats and dogs
+- Favorite Song: Currently listening to "Capitol" by Trust
+
+Answers:
+[1] pry(main)> first_ans = 7 / 2
+3
+[2] pry(main)> puts first_ans
+3
+nil
+[3] pry(main)> print first_ans
+3nil
+[4] pry(main)> first_ans = 7 / 2.to_f
+3.5
+[5] pry(main)> first_ans = 7.to_f / 2
+3.5
+[6] pry(main)> first_anq
+NameError: undefined local variable or method `first_anq' for main:Object
+from (pry):6:in `__pry__'
+[7] pry(main)> exit
+Joshua ~/dev/wdi/WDI_NYC_Feb14_Map/w01/d01/Joshua_Lieberman on master[?]
+$ pry
+[1] pry(main)> first_ans = 7 / 2
+3
+[2] pry(main)> puts first_ans
+3
+nil
+[3] pry(main)> print first_ans
+3nil
+[4] pry(main)> first_ans = 7 / 2.to_f
+3.5
+[5] pry(main)> first_ans = 7.to_f / 2
+3.5
+[6] pry(main)> first ans = 7 / 2.0
+NoMethodError: undefined method `first' for main:Object
+from (pry):6:in `__pry__'
+[7] pry(main)> first_ans = 7.0 / 2
+3.5
+[8] pry(main)> first_ans = first_ans.round * 4
+16
+[9] pry(main)> def get_character(full_string, index)
+[9] pry(main)*   full_string[index]  
+[9] pry(main)* end  
+:get_character
+[10] pry(main)> message_string = "oicdlcwhejkeenoemrstuo"
+"oicdlcwhejkeenoemrstuo"
+[11] pry(main)> character_1 = get_character(message_string, 4)
+"l"
+[12] pry(main)> character_2 = get_character(message_string, 7)
+"h"
+[13] pry(main)> character_3 = get_character(message_string, 2)
+"c"
+[14] pry(main)> message_array = [character_1, character_2]
+[
+    [0] "l",
+    [1] "h"
+]
+[15] pry(main)> message_array.push(character_2)
+[
+    [0] "l",
+    [1] "h",
+    [2] "h"
+]
+[16] pry(main)> message_array.pop()
+"h"
+[17] pry(main)> message_array.push(character_3)
+[
+    [0] "l",
+    [1] "h",
+    [2] "c"
+]
+[18] pry(main)> message_array
+[
+    [0] "l",
+    [1] "h",
+    [2] "c"
+]
+[19] pry(main)> puts message_array
+l
+h
+c
+nil
+[20] pry(main)> print message_array
+["l", "h", "c"]nil
+[21] pry(main)> value_float_1 = Math.sin(Math::PI / 2)
+1.0
+[22] pry(main)> value_float_2 = Math.cos(Math::PI)
+-1.0
+[23] pry(main)> value_float_3 = (value_float_1 + value_float_2)
+0.0
+[24] pry(main)> value_integer_1 = (value_float_1 + value_float_2).to_i
+0
+[25] pry(main)> value_float_1 = value_float_1 * 4
+4.0
+[26] pry(main)> value_float_2 *= 5
+-5.0
+[27] pry(main)> value_float_2 = value_float_2.abs
+5.0
+[28] pry(main)> value_integer_1 += 8
+8
+[29] pry(main)> value_float_4 = value_integer_1 * 3
+24
+[30] pry(main)> value_float_3 -= 1
+-1.0
+[31] pry(main)> number_array = [value_float_1, value_float_2, value_float_3, value_float_4]
+[
+    [0] 4.0,
+    [1] 5.0,
+    [2] -1.0,
+    [3] 24
+]
+[32] pry(main)> number_array.push(first_ans)
+[
+    [0] 4.0,
+    [1] 5.0,
+    [2] -1.0,
+    [3] 24,
+    [4] 16
+]
+[33] pry(main)> number_array.unshift(value_integer_1)
+[
+    [0] 8,
+    [1] 4.0,
+    [2] 5.0,
+    [3] -1.0,
+    [4] 24,
+    [5] 16
+]
+[34] pry(main)> number_array.push(value_integer_1)
+[
+    [0] 8,
+    [1] 4.0,
+    [2] 5.0,
+    [3] -1.0,
+    [4] 24,
+    [5] 16,
+    [6] 8
+]
+[35] pry(main)> number_array.unshift( Math.sqrt(36) )
+[
+    [0] 6.0,
+    [1] 8,
+    [2] 4.0,
+    [3] 5.0,
+    [4] -1.0,
+    [5] 24,
+    [6] 16,
+    [7] 8
+]
+[36] pry(main)> number_array.delete_at(5)
+24
+[37] pry(main)> number_array.push( [19, 21, 6, 3, 1] )
+[
+    [0] 6.0,
+    [1] 8,
+    [2] 4.0,
+    [3] 5.0,
+    [4] -1.0,
+    [5] 16,
+    [6] 8,
+    [7] [
+        [0] 19,
+        [1] 21,
+        [2] 6,
+        [3] 3,
+        [4] 1
+    ]
+]
+[38] pry(main)> number_array.flatten!
+[
+    [ 0] 6.0,
+    [ 1] 8,
+    [ 2] 4.0,
+    [ 3] 5.0,
+    [ 4] -1.0,
+    [ 5] 16,
+    [ 6] 8,
+    [ 7] 19,
+    [ 8] 21,
+    [ 9] 6,
+    [10] 3,
+    [11] 1
+]
+[39] pry(main)> number_array.each { |current_index| puts get_character(message_string, current_index) }
+w
+e
+l
+c
+o
+m
+e
+t
+o
+w
+d
+i
+[
+    [ 0] 6.0,
+    [ 1] 8,
+    [ 2] 4.0,
+    [ 3] 5.0,
+    [ 4] -1.0,
+    [ 5] 16,
+    [ 6] 8,
+    [ 7] 19,
+    [ 8] 21,
+    [ 9] 6,
+    [10] 3,
+    [11] 1
+]
+
+```
+{
+"comfortability":"5",
+"completeness":"5"
+}
+```
