@@ -4,7 +4,6 @@
 - Spirit Animal: Dolphin?
 - Favorite Song: Forget the Swan - Dinosaur Jr. 
 
-
 first_ans = 7 / 2 
 	3
 puts first_ans
