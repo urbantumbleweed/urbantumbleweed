@@ -23,7 +23,6 @@ elsif (calc_function == "d")
   puts "#{first_num} / #{second_num} = #{divide}"
 elsif (calc_function == "e")
   puts "#{first_num} ** #{second_num} = #{exponent}"
-
 else
   puts "Sorry that's an invalid function. Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply, (e) power/exponent, (t) trig functions"
   calc_function = gets.chomp.downcase
