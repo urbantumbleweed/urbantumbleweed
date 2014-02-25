@@ -9,4 +9,6 @@ value_2 = gets.chomp.to_f
 
 if operator == "+"
 	puts value_1 + value_2
+	elsif operator == "-"
+	puts value_1 - value_2
 end
