@@ -22,13 +22,22 @@ while initializer != "q"
     x + y
   end
 
+  def subtract( x , y )
+    x - y
+  end
+
   case initializer
     when "a"
       nums = getNumbers
-      puts "You chose add: #{nums[0]} + #{nums[1]} = #{add( nums[0] , nums[1] )}."
+      puts "You chose to add: #{nums[0]} + #{nums[1]} = #{add( nums[0] , nums[1] )}."
+    when "s"
+      nums = getNumbers
+      puts "You chose to subtract: #{nums[0]} - #{nums[1]} = #{subtract( nums[0] , nums[1] )}."
     else
       puts "You pressed 'q' to quit.  Smell ya later."
   end
+
+
 
 
 end
