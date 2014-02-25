@@ -56,11 +56,13 @@ git push origin hw_branch_w01_d01
 
 **Make a pull request**
 
-* Go to your own github account and make your pull request
+* Go to your own github account (your fork on github) and make your pull request
+	* Click the green icon next to the repository name
 * Your pull request should be submitted from your hw_branch to upstream master (ga-students:master)
+* You might have to **compare across forks** to get github to recognize the changes
 * You MUST title your pull request starting with hw_w01_d01
 * For example: "hw_w01_d01 Complete Calculator HW"
-* You MUST include comments on your comfortability with the assignment and level of completeness.
+* You MUST include comments on your comfortability with the assignment and level of completeness on a scale of 1-5
 
 ```
 {
