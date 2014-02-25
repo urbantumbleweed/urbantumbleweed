@@ -20,4 +20,6 @@ if initializer == "a"
   puts "The answer is " + (x + y).to_s + "."
 elsif initializer == "s"
   puts "The answer is " + (x - y).to_s + "."
+elsif initializer == "m"
+  puts "The answer is " + (x * y).to_s + "."
 end
