@@ -35,16 +35,17 @@ while initializer != "q"
 		# Phase 2 - create the condition and steps to subtract.
 		elsif initializer == "s"
 			print "I can help you with subtraction.  What number do you want to subtract from? "
-			num1 = gets.chomp
+			num1 = gets.chomp.to_i
 
 			print "OK, now tell me the second number."
-			num2 = gets.chomp
+			num2 = gets.chomp.to_i
 
 			difference = num1 - num2
 
 			puts "You get #{difference} when you subtract #{num2} from #{num1}."
 
 		end
+
 
 
 	initializer = gets.chomp
