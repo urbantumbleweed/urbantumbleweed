@@ -1,4 +1,4 @@
-# Building Ruby Familiarity
+h# Building Ruby Familiarity
 
 #### In this exercise you will take a first look at some common commands in Ruby
 #### The idea here is to build familiary with Ruby syntax
@@ -115,4 +115,5 @@
 
 
 	number_array.each { |current_index| puts get_character(message_string, current_index) }
+
 

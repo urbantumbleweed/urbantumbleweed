@@ -1,0 +1,100 @@
+=> 3
+
+3
+=> nil
+
+3=> nil
+
+=> 3.5
+
+=> 3.5
+
+=> 3.5
+
+=> 3.5
+
+=> 16
+
+=> :get_character
+
+=> "oicdlcwhejkeenoemrstuo"
+
+=> "l"
+
+=> "h"
+
+=> "c"
+
+=> ["l", "h"]
+
+=> ["l", "h", "h"]
+
+=> "h"
+
+=> ["l", "h", "c"]
+
+=> ["l", "h", "c"]
+
+l
+h
+c
+=> nil
+
+["l", "h", "c"]=> nil
+
+=> 1.0
+
+=> -1.0
+
+=> 0.0
+
+=> 0
+
+=> 4.0
+
+=> -5.0
+
+=> 5.0
+
+=> 8
+
+=> 24
+
+=> -1.0
+
+=> [4.0, 5.0, -1.0, 24]
+
+NameError: undefined local variable or method `first_ans' for main:Object
+  from (irb):26
+  from /Users/alexshook/.rbenv/versions/2.1.0/bin/irb:11:in `<ma
+
+=> [8, 4.0, 5.0, -1.0, 24]
+
+=> [8, 4.0, 5.0, -1.0, 24, 8]
+
+=> [6.0, 8, 4.0, 5.0, -1.0, 24, 8]
+
+=> 24
+
+=> [6.0, 8, 4.0, 5.0, -1.0, 8, [19, 21, 6, 3, 1]]
+
+=> [6.0, 8, 4.0, 5.0, -1.0, 8, 19, 21, 6, 3, 1]
+
+w
+e
+l
+c
+o
+e
+t
+o
+w
+d
+i
+=> [6.0, 8, 4.0, 5.0, -1.0, 8, 19, 21, 6, 3, 1]
+
+- Name: Alexandra Shook
+- Github Handle: alexshook
+- Favorite Food: bacon
+- Spirit Animal: sloth
+- Favorite Song: Reelin' In the Years
