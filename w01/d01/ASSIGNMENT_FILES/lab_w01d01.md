@@ -5,7 +5,8 @@
 * **PULL** changes from Github
 * **CD** into the week and day folder
 * **CD** to ASSIGNMENT_FILES
-* **COPY** the homework markdown file into your NAME_FOLDER
+* **COPY** the homework markdown file into
+your NAME_FOLDER
 * **CD** into your Name_Folder and make sure that you have successfully copied the file
 
 ___
@@ -40,6 +41,6 @@ Follow the directions to submit your first assignment!
 
 ####Part 4
 
-* Rest 
+* Rest
 * Review basic ruby
 * Practice working with your command line : move around files, make new files, make folders, delete files/folders
