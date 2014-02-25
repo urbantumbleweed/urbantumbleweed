@@ -20,4 +20,8 @@ if op == "+"
   puts "Your result is #{sum}!"
 end
 
+if op == "-"
+  diff = x - y
+  puts "Your result is #{diff}!"
+end
 
