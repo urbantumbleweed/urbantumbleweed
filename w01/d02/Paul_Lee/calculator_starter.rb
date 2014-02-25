@@ -10,7 +10,7 @@ second_num = gets.chomp.to_i
 add = first_num + second_num
 subtract = first_num - second_num
 multiply = first_num * second_num
-
+divide = first_num  / second_num
 
 if (calc_function == "a")
   puts "#{first_num} + #{second_num} = #{add}"
@@ -18,6 +18,9 @@ elsif (calc_function == "s")
   puts "#{first_num} - #{second_num} = #{subtract}"
 elsif (calc_function == "m")
   puts "#{first_num} * #{second_num} = #{multiply}"
-
-
+elsif (calc_function == "d")
+  puts "#{first_num} / #{second_num} = #{divide}"
+else
+  puts "Sorry that's an invalid function. Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply"
+  calc_function = gets.chomp.downcase
 end
