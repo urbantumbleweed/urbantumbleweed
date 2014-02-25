@@ -1,12 +1,15 @@
-initializer = "start"
+puts "What are you doing with the calculator? Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply"
 
-# Prompt the user to enter a math operation
-# Prompt the user to enter two values
-# Perform the proper math operation on the two values entered
-# Print out a statement with the result. 
-while initializer != "q"
-	print "Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply"
+calc_function = gets.chomp.downcase
 
+puts "First number?"
+first_num = gets.chomp.to_i
 
-	initializer = gets.chomp
+puts "Second number?"
+second_num = gets.chomp.to_i
+
+add = first_num + second_num
+
+if (calc_function == "a")
+  puts "#{first_num} + #{second_num} = #{add}"
 end
