@@ -30,5 +30,10 @@ if op == "*"
   puts "Your result is #{product}!"
 end
 
+if op == "/"
+  divide = x / y
+  puts "Your result is #{divide}!"
+end
+
 
 
