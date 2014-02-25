@@ -22,7 +22,7 @@ while initializer != "q"
 
 		#Phase 1 - create the condition that adds
 		if initializer == "a"
-			print "Great, you want to add.  What's the first number? "
+			puts "Great, you want to add.  What's the first number? "
 			num1 = gets.chomp.to_i
 			
 			print "What's the second number? "
@@ -34,7 +34,7 @@ while initializer != "q"
 
 		# Phase 2 - create the condition and steps to subtract.
 		elsif initializer == "s"
-			print "I can help you with subtraction.  What number do you want to subtract from? "
+			puts "I can help you with subtraction.  What number do you want to subtract from? "
 			num1 = gets.chomp.to_i
 
 			print "OK, now tell me the second number."
@@ -43,6 +43,21 @@ while initializer != "q"
 			difference = num1 - num2
 
 			puts "You get #{difference} when you subtract #{num2} from #{num1}."
+		
+		# Phase 3 - create the steps for the multiply condition.
+		elsif initializer == "m"
+			puts "Multiplication, awesome!  What's the first num?"
+			num1 = gets.chomp.to_i
+
+			puts "What is the second number for this operation?"
+			num2 = gets.chomp.to_i
+
+			product = num1 * num2
+
+			puts "#{num1} times #{num2} is #{product}."
+
+		
+
 
 		end
 
