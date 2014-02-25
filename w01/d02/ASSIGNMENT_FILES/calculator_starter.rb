@@ -25,3 +25,10 @@ if op == "-"
   puts "Your result is #{diff}!"
 end
 
+if op == "*"
+  product = x * y
+  puts "Your result is #{product}!"
+end
+
+
+
