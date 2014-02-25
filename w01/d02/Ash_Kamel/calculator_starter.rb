@@ -1,7 +1,5 @@
 initializer = "start"
 
-
-
 # Prompt the user to enter a math operation
 # Prompt the user to enter two values
 # Perform the proper math operation on the two values entered
@@ -18,8 +16,12 @@ while initializer != "q"
 	num2 = gets.chomp.to_f
 
 	if operator == "a"
-	puts num1 + num2
+		puts num1 + num2
+	elsif operator == "s"
+		puts num1 - num2
 	
+	else
+		puts "You didnt enter a valid operator or number"
 	end
 
 	puts "Press q to finish or enter to calculate a new value"
