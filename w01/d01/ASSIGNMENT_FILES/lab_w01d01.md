@@ -1,4 +1,4 @@
-..#Lab w01d01
+#Lab w01d01
 
 ####Part 1
 
