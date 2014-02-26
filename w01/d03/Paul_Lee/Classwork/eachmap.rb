@@ -5,6 +5,7 @@ user_arr = []
 
 while  initializer != ' q'
   puts "Type a string you want to add to your list. Press 'q' if you want to quit"
+
   user_arr << initializer
   return user_arr gets.chomp.capitalize
 end
