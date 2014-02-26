@@ -1,9 +1,9 @@
 # Prompt the user to enter a math operation
-puts "Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply."
+puts "Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply, (e) for exponent."
 initializer = gets.chomp
 
-while initializer != "a" && initializer != "s" && initializer != "d" && initializer != "m"
-	puts "Sorry, I don't understand. Please press (a) to add, (s) to subtract, (d) to divide, (m) to multiply."
+while initializer != "a" && initializer != "s" && initializer != "d" && initializer != "m" && initializer != "e"
+	puts "Sorry, I don't understand. Please press (a) to add, (s) to subtract, (d) to divide, (m) to multiply, (e) for exponent."
   initializer = gets.chomp
 end
 
@@ -24,4 +24,6 @@ elsif initializer == "d"
   puts "The answer is " + (x.to_f / y.to_f).to_s + "."
 elsif initializer == "m"
   puts "The answer is " + (x * y).to_s + "."
+elsif initializer == "e"
+  puts "The answer is " + ( x ** y).to_s + "."
 end
