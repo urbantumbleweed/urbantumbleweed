@@ -30,6 +30,10 @@ while initializer != "q"
     x * y
   end
 
+  def divide( x , y )
+    x / y
+  end
+
   case initializer
     when "a"
       nums = getNumbers
@@ -40,12 +44,15 @@ while initializer != "q"
     when "m"
       nums = getNumbers
       puts "You chose to multiply: #{nums[0]} * #{nums[1]} = #{multiply( nums[0] , nums[1] )}."
-    else
+    when "d"
+      nums = getNumbers
+      puts "You chose to divide: #{nums[0]} / #{nums[1]} = #{divide( nums[0] , nums[1] )}."
+    when "q"
       puts "You pressed 'q' to quit.  Smell ya later."
+      exit
+    else
+      puts "Please enter a valid command, or 'q' to quit."
   end
-
-
-
 
 end
 
