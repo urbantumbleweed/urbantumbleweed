@@ -5,7 +5,7 @@ initializer = "start"
 # Perform the proper math operation on the two values entered
 # Print out a statement with the result.
 while initializer != "q"
-  print "Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply: "
+  print "Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply, (e) to use exponents: "
   initializer = gets.chomp
 
   def getNumbers
@@ -34,6 +34,10 @@ while initializer != "q"
     x / y
   end
 
+  def exponent( x , y )
+    x ** y
+  end
+
   case initializer
     when "a"
       nums = getNumbers
@@ -47,6 +51,9 @@ while initializer != "q"
     when "d"
       nums = getNumbers
       puts "You chose to divide: #{nums[0]} / #{nums[1]} = #{divide( nums[0] , nums[1] )}."
+    when "e"
+      nums = getNumbers
+      puts "You chose to use exponents: #{nums[0]} ^ #{nums[1]} = #{exponent( nums[0] , nums[1] )}."
     when "q"
       puts "You pressed 'q' to quit.  Smell ya later."
       exit
