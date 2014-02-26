@@ -2,7 +2,7 @@ initializer = "start"
 puts "I can help you with math.  What you like to do?"
 while initializer != "q"
 	# Prompt the user to select which operation to do:
-	puts "You can add (a), subtract (s), divide (d), multiply (m), or quit (q)"
+	puts "You can add (a), subtract (s), divide (d), multiply (m), exponents (e), trigonometry (t), or quit (q)"
 	print "> "
 
 	#exit_prompt = "You can add (a), subtract (s), divide (d), multiply (m), or quit (q)"
@@ -15,15 +15,34 @@ while initializer != "q"
 
 	# Declare the variables used in the program to collect the input for 
 	# any operation.
-	
+
+
 	#Collect the input for the mathematical operation if initializer is not 'q'.
-	if initializer != "q"
+	if (initializer != "q") && (initializer != "t")
 		puts "What's the first number?"
 		num1 = gets.chomp.to_i
 
 		puts "What's the second number?"
 		num2 = gets.chomp.to_i
 	end
+
+	# If user wants trigonometric functions
+	if initializer == "t"
+		puts "Do you want to calculate sine (s), cosine (c), or tangent (t)?"
+		trig = gets.chomp
+		if trig == "s"
+			initializer = "sin"
+		elsif trig == "c"
+			initializer = "cos"
+		elsif trig == "t"
+			initializer = "tan"
+		end
+
+		#get number to evaluate from user
+		puts "What number do you want to evaluate?"
+		trig_num = gets.chomp.to_f
+	end
+
 
 	#Phase 1 - create the condition that adds
 	if initializer == "a"
@@ -49,6 +68,11 @@ while initializer != "q"
 	elsif initializer == "e"
 		exponent = num1 ** num2
 		puts "#{num1} raised to #{num2} is #{exponent}"
+
+	# Phase 6 - create sine branch
+	elsif initializer == "sin"
+		sin_num = Math.sin(trig_num)
+		puts "The #{initializer} of #{trig_num} is #{sin_num}."
 
 	end
 
