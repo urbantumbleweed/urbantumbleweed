@@ -52,7 +52,7 @@ else
   elsif operation == "o"
     puts "Your answer is #{modulo}"
   else
-    puts "You didn't enter a valid operation."
+    puts "You didn't enter a valid operation. You get no answer."
   end
 
   puts "Press 'q' to quit or ENTER to do another operation."
