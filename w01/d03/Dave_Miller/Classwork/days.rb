@@ -18,4 +18,3 @@ if user_input >= 1 && user_input <= 7
 else
   puts "Random day of the week: #{arr.sample}!"
 end
-
