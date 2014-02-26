@@ -27,4 +27,3 @@ while initializer != "q"
 	initializer = gets.chomp
 
 end
-

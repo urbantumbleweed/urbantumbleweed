@@ -22,4 +22,3 @@ part = gets.chomp
 template = "and before you knew it my #{adjective} grandma had #{verb} right out the door! Apparently, as she later recounted, she saw the human incarnation of #{character} jump right out of the #{noun} grabbing its #{part} and screaming #{phrase}!!!"
 
 puts template
-
