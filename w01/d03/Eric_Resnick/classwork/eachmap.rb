@@ -16,6 +16,12 @@
 # Word 2 is Red
 # Word 3 is Fire
 
+Puts "Enter as many values as you would like. Enter (q) when done"
+
+
+while value != "q"
+	value = gets.chomp
+end
 
 
 
