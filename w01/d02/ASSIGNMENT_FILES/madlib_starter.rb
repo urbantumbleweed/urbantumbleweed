@@ -1,4 +1,3 @@
-
 puts "Welcome to the Mad Lib Generator"
 
 # Prompt the user to enter different words
