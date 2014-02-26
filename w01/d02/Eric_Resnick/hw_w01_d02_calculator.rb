@@ -16,3 +16,5 @@ value_2 = gets.chomp.to_i
 
 if math_operation == 'a'
 	puts (value_1 + value_2)
+elsif math_operation == 's'
+	puts (value_1 - value_2)
