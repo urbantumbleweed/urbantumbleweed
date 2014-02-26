@@ -1,0 +1,23 @@
+Collections
+Group of things
+Add or remove
+Access
+
+Ex: Array
+arr = [6, 7, 8, 9,]
+[index:  0  1  2  3 ]
+
+declare/set second element: second = arr[1]
+
+push "5" into the array (last position): arr.push(5)
+	or: arr << 22
+
+remove last position from the array: arr.pop
+	input: "arr"
+	output (what pry returns): 42
+	side effect: arr is changed
+
+To save the popped number, you can assign the action a variable: ex. num = arr.pop
+
+arr.shift: removes first element of array, (SE) array changes
+arr.unshift(24): adds 24 to array's first position, (OP) the new array, (SE) array changes
