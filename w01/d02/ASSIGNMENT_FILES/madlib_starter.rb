@@ -1,4 +1,3 @@
-
 puts "Welcome to the Mad Lib Generator"
 
 puts "Enter a verb!"
