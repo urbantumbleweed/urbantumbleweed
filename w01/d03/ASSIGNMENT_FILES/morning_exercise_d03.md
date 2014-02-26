@@ -24,5 +24,5 @@ Now for the division operator **( `/` )**. The loop should prompt the user to en
 
 #####Exponents (can use multiplication)
 
-Finally the exponent operator **( `**` )** in ruby. The loop should take in two numbers from the user: the first being the base number, the second the exponent. The loop should print out the exponent for the user.
+Finally the exponent operator ( `**` ) in ruby. The loop should take in two numbers from the user: the first being the base number, the second the exponent. The loop should print out the exponent for the user.
 
