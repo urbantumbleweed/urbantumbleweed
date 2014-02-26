@@ -2,9 +2,6 @@
 #               FAVORITIST
 # =========================================
 
-
-
-
 #Here's the better code with the method that we defined
 
 def question(category)
