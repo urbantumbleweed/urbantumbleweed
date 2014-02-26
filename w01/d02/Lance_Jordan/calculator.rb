@@ -5,15 +5,16 @@ ask = "What would you like to do?"
 puts "#{ask}"
 
 # options array to put all options
-options = [ "add = "+"+",
-            "subtract = "+ "-",
+options = [ "type + to add",
+            "type - to subtract",
+            "type * to multiply"
           ]
 
 options.each do|o|
   puts o
 end
 
-operators = [ "+","-" ]
+operators = [ "+","-","*" ]
 
 # choose from puts-ed array
 select = gets.chomp.to_s
@@ -39,6 +40,7 @@ puts "Answer is: "
 case operand
     when :+ then puts num1 + num2
     when :- then puts num1 - num2
+    when :* then puts num1 * num2
     else
       puts "invalid input, quitting."
     end
