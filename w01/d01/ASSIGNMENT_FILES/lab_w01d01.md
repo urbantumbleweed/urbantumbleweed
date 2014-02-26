@@ -40,6 +40,6 @@ Follow the directions to submit your first assignment!
 
 ####Part 4
 
-* Rest 
+* Rest
 * Review basic ruby
 * Practice working with your command line : move around files, make new files, make folders, delete files/folders
