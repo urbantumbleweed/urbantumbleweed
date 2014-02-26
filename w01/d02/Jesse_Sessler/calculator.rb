@@ -13,7 +13,8 @@ Or use (q) to quit.
 (tan) => tangent
 EOS
 
-puts "Welcome to the WDI Calculator."
+puts 'Welcome to the WDI Calculator.'
+puts 'Non-number characters are treated as 0s.'
 puts calc_menu
 operation = ''
 until operation == 'q'
@@ -22,28 +23,20 @@ until operation == 'q'
   if operations.include?(operation)
     print 'Enter number: '
     first_num = gets.to_f
-    unless %w(sin cos tan).include?(operation)
+    unless operations[5..7].include?(operation) # trig operations
       print 'Enter second number: '
       second_num = gets.to_f
     end
-    print "=> "
+    print '=> '
     case operation
-    when 'a'
-      puts first_num + second_num
-    when 's'
-      puts first_num - second_num
-    when 'd'
-      puts first_num / second_num
-    when 'm'
-      puts first_num * second_num
-    when 'e'
-      puts first_num ** second_num
-    when 'sin'
-      puts Math.sin(first_num)
-    when 'cos'
-      puts Math.cos(first_num)
-    when 'tan'
-      puts Math.tan(first_num)
+    when 'a' then puts first_num + second_num
+    when 's' then puts first_num - second_num
+    when 'd' then puts first_num / second_num
+    when 'm' then puts first_num * second_num
+    when 'e' then puts first_num**second_num
+    when 'sin' then puts Math.sin(first_num)
+    when 'cos' then puts Math.cos(first_num)
+    when 'tan' then puts Math.tan(first_num)
     end
   else
     puts 'Please enter a valid operator.' unless operation == 'q'
