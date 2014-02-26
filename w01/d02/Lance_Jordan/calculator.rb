@@ -7,14 +7,15 @@ puts "#{ask}"
 # options array to put all options
 options = [ "type + to add",
             "type - to subtract",
-            "type * to multiply"
+            "type * to multiply",
+            "type / to divide"
           ]
 
 options.each do|o|
   puts o
 end
 
-operators = [ "+","-","*" ]
+operators = [ "+","-","*","/" ]
 
 # choose from puts-ed array
 select = gets.chomp.to_s
@@ -41,6 +42,7 @@ case operand
     when :+ then puts num1 + num2
     when :- then puts num1 - num2
     when :* then puts num1 * num2
+    when :/ then puts num1 / num2
     else
       puts "invalid input, quitting."
     end
