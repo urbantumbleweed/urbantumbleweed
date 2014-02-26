@@ -3,7 +3,14 @@ initializer = "start"
 while initializer != "q"
 # Prompt the user to enter a math operation
 puts "Press (a) to add, (s) to subtract, (d) to divide, (m) to multiply, (o) to calculate exponents, (sin) to calculate the sine, (cos) to calculate the cosine, or (tan) to calculate the tangent."
-operation = gets.chomp
+operation = gets.chomp.downcase
+
+valid_op = ["a", "s", "d", "m", "o", "sin", "cos", "tan"]
+
+while !valid_op.include? operation
+  puts "You didn't input a valid letter, putz. Try again.\nPress (a) to add, (s) to subtract, (d) to divide, (m) to multiply, (o) to calculate exponents, (sin) to calculate the sine, (cos) to calculate the cosine, or (tan) to calculate the tangent. "
+  operation = gets.chomp.downcase
+end
 
 if operation == ( "sin" ) || operation == ( "cos" ) || operation == ( "tan")
   puts "Enter value"
@@ -51,8 +58,8 @@ else
     puts "Your answer is #{multiply}!"
   elsif operation == "o"
     puts "Your answer is #{modulo}"
-  else
-    puts "You didn't enter a valid operation. You get no answer."
+  # else
+  #   puts "You didn't enter a valid operation. You get no answer."
   end
 
   puts "Press 'q' to quit or ENTER to do another operation."
