@@ -17,18 +17,6 @@
 
 
 # Bouncer
-# Write a bouncer program.
-
-# It prompt the user for their age.
-
-# Then:
-
-# * If their age is less than 18, tell them to get out.
-
-# * If they are 18 - 20, tell them that they can come in, but
-# don't get a wristband.
-
-# * If they are 21 or over, tell them they can come in and that they get a wrist band.
 
 # puts "What is your age?"
 
@@ -59,20 +47,21 @@ current_temp = gets.chomp.to_i
 puts("What's the desired temp?")
 desired_temp = gets.chomp.to_i
 
-
-# while exp
-  # do stuff
-# end
-
-
 puts("Is the AC Working? ('y' or 'n')?")
 ac_functional = gets.chomp
+
+
 
 while (ac_functional != 'y') && (ac_functional != 'n')
   puts("Invalid answer. Is the AC Working? ('y' or 'n')?")
   ac_functional = gets.chomp
 end
 
+if ac_functional == 'y'
+  ac_functional = true
+elsif ac_functional == 'n'
+  ac_functional = false
+end
 
 too_hot = (current_temp > desired_temp)
 
@@ -83,4 +72,6 @@ elsif !ac_functional && too_hot
 elsif !ac_functional && !too_hot
   puts("fix it whenever")
 end
+
+
 
