@@ -17,6 +17,18 @@
 
 
 # Bouncer
+# Write a bouncer program.
+
+# It prompt the user for their age.
+
+# Then:
+
+# * If their age is less than 18, tell them to get out.
+
+# * If they are 18 - 20, tell them that they can come in, but
+# don't get a wristband.
+
+# * If they are 21 or over, tell them they can come in and that they get a wrist band.
 
 # puts "What is your age?"
 
