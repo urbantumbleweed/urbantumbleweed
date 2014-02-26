@@ -1,3 +1,5 @@
+#Mad Lib Generator Homework
+
 puts "Welcome to the Mad Lib Generator"
 
 puts "Enter a verb"
@@ -21,3 +23,14 @@ puts "Enter a name"
 puts "Enter a proper noun"
 	noun_prop = gets.chomp.downcase
 
+
+
+puts "Never #{verb} a bear before you go to bed. I did last night 
+and all night there were #{noun} floating around in 
+my head, dancing around like little #{color} Pokemon. 
+One Pokemon, two Pokemon, #{number} Pokemons. All I could 
+think was Will I ever be the very best? I guess I could 
+be as #{adjective} as the greats that came before me. 
+ASH! MISTY! #{name} ! But alas, only time will tell if 
+I will ever become an amazing #{noun_prop}. But for now, 
+I'll just try to learn Ruby."
