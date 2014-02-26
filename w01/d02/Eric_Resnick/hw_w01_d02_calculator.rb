@@ -20,3 +20,6 @@ elsif math_operation == 's'
 	puts (value_1 - value_2)
 elsif math_operation == 'd'
 	puts (value_1 / value_2)
+elsif math_operation == 'm'
+	puts (value_1 * value_2)
+end
