@@ -17,7 +17,25 @@ remove last position from the array: arr.pop
 	output (what pry returns): 42
 	side effect: arr is changed
 
-To save the popped number, you can assign the action a variable: ex. num = arr.pop
+To save the popped number, you can assign the action a variable: ex. day = arr.pop
 
 arr.shift: removes first element of array, (SE) array changes
 arr.unshift(24): adds 24 to array's first position, (OP) the new array, (SE) array changes
+
+
+Arrays:
+Ordered, Generally contain similar elements
+
+Hashes:
+Order doesn't matter
+Each piece of information is labelled
+A Hash is a set of Key-Value Pair
+
+Example:
+info = { "key" => "value", "name" => "Hari", "age" => 50 }
+
+info["name"] = "Hari"
+
+to add:
+
+info["occupation"] = "WDI"
