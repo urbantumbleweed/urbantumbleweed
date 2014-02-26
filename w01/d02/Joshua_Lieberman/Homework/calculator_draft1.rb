@@ -1,3 +1,4 @@
+#no methods, doesn't have full functionality
 puts "What would you like to do?"
 puts "For addition, type 'a'"
 puts "For subtraction, type 's'"
@@ -6,7 +7,6 @@ puts "For division, type 'd'"
 puts "For exponents, type 'e'"
 puts "For trigonometry, type 't'"
 puts "To quit, type 'q'"
-
 calc = gets.chomp.downcase
 
 while calc != "q"
@@ -51,25 +51,23 @@ while calc != "q"
 			puts "for cosine, type 'cos'"
 			puts "for tangent, type 'tan'"
 			trig_func = gets.chomp.downcase
-				if trig_func == "sin"
-					puts "enter number"
-					num = gets.chomp.to_f
-					ans = Math.sin(num)
-					puts ans
-				elsif trig_func == "cos"
-					puts "enter number"
-					num = gets.chomp.to_f
-					ans = Math.cos(num)
-					puts ans
-				elsif trig_func == "tan"
-					puts "enter number"
-					num = gets.chomp.to_f
-					ans = Math.tan(num)
-					puts "#{ans} radians"
-				end
-				break
-		end #ends inner 'if'
-	else
+			if trig_func == "sin"
+				puts "enter number"
+				num = gets.chomp.to_f
+				ans = Math.sin(num)
+				puts ans
+			elsif trig_func == "cos"
+				puts "enter number"
+				num = gets.chomp.to_f
+				ans = Math.cos(num)
+				puts ans
+			elsif trig_func == "tan"
+				puts "enter number"
+				num = gets.chomp.to_f
+				ans = Math.tan(num)
+				puts "#{ans} radians"
+			end
+		end
 	puts "What would you like to do?"
 	puts "For addition, type 'a'"
 	puts "For subtraction, type 's'"
