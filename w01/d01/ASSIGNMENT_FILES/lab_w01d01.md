@@ -5,8 +5,7 @@
 * **PULL** changes from Github
 * **CD** into the week and day folder
 * **CD** to ASSIGNMENT_FILES
-* **COPY** the homework markdown file into
-your NAME_FOLDER
+* **COPY** the homework markdown file into your NAME_FOLDER
 * **CD** into your Name_Folder and make sure that you have successfully copied the file
 
 ___
