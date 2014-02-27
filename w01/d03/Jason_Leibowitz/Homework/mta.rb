@@ -12,10 +12,11 @@ def print_menu(var)
   subway_system = {"n" => ["ts", "34th", "28th-n", "23rd-n", "us", "8th"], "l" => ["8th", "6th", "us", "3rd", "1st"], "6" => ["gc", "33rd", "28th-s","23rd-s", "us", "astor"], "1" => ["59th", "50th", "ts", "34th-1", "28th-1"]}
 
   puts "You are taking the (#{var}) subway line. We will figure out how many stops your trip will take. Please choose a starting station from the following list:"
-  subway_system[var].each do |x|
-    puts x
-  end
-  puts
+  # subway_system[var].each do |x|
+  #   puts x
+  # end
+  # puts
+  puts subway_system[var].join(", ")
 end
 
 # do two different subway lines intersect? if true, returns true
