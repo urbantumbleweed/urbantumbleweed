@@ -38,24 +38,7 @@ if line_on == line_off
   trip = mta[line_on].index(stop_on) - mta[line_off].index(stop_off)
   puts "Your trip will take #{trip.abs} stops."
 
-elsif line_on == "n"
-  if mta.include?(line_off)
-  end
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-
-elsif line_on == "l"
-  if mta.include?(line_off)
-  end
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-
-elsif line_on == "six"
-  if mta.include?(line_off)
-  end
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-
-elsif line_on == "one"
-  if mta.include?(line_off)
-  end
+elsif mta.include?(line_on) && mta.include?(line_off)
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
 else
