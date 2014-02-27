@@ -1,0 +1,2 @@
+%w( series of elements to turn into an array ) =
+["series", "of", "elements", "to", "turn", "into", "an", "array"]
