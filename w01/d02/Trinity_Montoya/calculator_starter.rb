@@ -22,7 +22,6 @@ while !ops.include?("#{operation}") && !trig_ops.include?("#{operation}")
 end
 
 #if in the ops array, ask for two args
-
 if ops.include?(operation)
   puts "Great choice! Could you please provide the first number"
   ops_ans_1 = gets.chomp.to_i
@@ -31,7 +30,6 @@ if ops.include?(operation)
 end
 
 #if part of the trig array, ask for one arg
-
 if trig_ops.include?(operation)
   puts "Great choice! Could you please provide the number"
   trig_ans = gets.chomp.to_i
