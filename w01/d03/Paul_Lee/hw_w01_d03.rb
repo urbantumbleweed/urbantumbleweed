@@ -30,41 +30,40 @@ def transfer_calc(mta, line_on, stop_on, line_off, stop_off)
     trip = ( (mta[line_on].index(stop_on) - mta[line_on].index('ts') ).abs ) + ( (mta[line_off].index(stop_off) - mta[line_off].index('ts') ).abs )
   elsif mta[line_on].include?('34th') && mta[line_on].include?('34th')
     trip = ( (mta[line_on].index(stop_on) - mta[line_on].index('34th') ).abs ) + ( (mta[line_off].index(stop_off) - mta[line_off].index('34th') ).abs )
-
-    puts "Your trip will take #{trip.abs} stops."
   end
+    puts "Your trip will take #{trip.abs} stops."
 end
 
 if line_on == line_off
   trip = mta[line_on].index(stop_on) - mta[line_off].index(stop_off)
   puts "Your trip will take #{trip.abs} stops."
 
-elsif  line_on == "n" &&  line_off == "l"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "n" &&  line_off == "six"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "n" &&  line_off == "one"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-
-elsif  line_on == "l" &&  line_off == "n"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "l" &&  line_off == "six"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "l" &&  line_off == "one"
+elsif line_on == "n"
+  if line_off == "l"
+  elsif line_off == "six"
+  elsif line_off == "one"
+  end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
-elsif  line_on == "six" &&  line_off == "n"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "six" &&  line_off == "l"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "six" &&  line_off == "one"
+elsif line_on == "l"
+  if line_off == "n"
+  elsif line_off == "six"
+  elsif line_off == "one"
+  end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
-elsif  line_on == "one" &&  line_off == "n"
+elsif line_on == "six"
+  if line_off == "n"
+  elsif line_off == "l"
+  elsif line_off == "one"
+  end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "one" &&  line_off == "l"
-  transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-elsif  line_on == "one" &&  line_off == "six"
+
+elsif line_on == "one"
+  if line_off == "l"
+  elsif line_off == "six"
+  elsif line_off == "n"
+  end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
 else
