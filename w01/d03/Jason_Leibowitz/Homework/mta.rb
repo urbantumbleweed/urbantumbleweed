@@ -63,7 +63,7 @@ else
 
       transfer_journey_first_leg = subway_system[user_subway_line].index(first_stop) - subway_system[user_subway_line].index("ts")
       transfer_journey_second_leg = subway_system[second_subway_line].index(second_line_stop) - subway_system[second_subway_line].index("ts")
-      transfer_journey = transfer_journey_second_leg + transfer_journey_first_leg
+      transfer_journey = transfer_journey_second_leg.abs + transfer_journey_first_leg.abs
       puts "Your journey will take #{transfer_journey.abs} stops. Beware of the smelly hobos."
     elsif !valid(subway_system[user_subway_line], subway_system[second_subway_line])
       puts "Those two lines do not have a free transfer. Sorry. The dirty hobos have eaten you. Game over."
@@ -78,8 +78,8 @@ else
       if subway_system[second_subway_line].include? second_line_stop
         transfer_journey_first_leg = subway_system[user_subway_line].index(first_stop) - subway_system[user_subway_line].index("us")
         transfer_journey_second_leg = subway_system[second_subway_line].index(second_line_stop) - subway_system[second_subway_line].index("us")
-        transfer_journey = transfer_journey_first_leg + transfer_journey_second_leg
-        puts "Your journey will take #{transfer_journey.abs} stops. Beware of smelly hobos."
+        transfer_journey = transfer_journey_first_leg.abs + transfer_journey_second_leg.abs
+        puts "Your journey will take #{transfer_journey} stops. Beware of smelly hobos."
       else
         puts "That is not a valid stop. You broke the internets."
         exit
