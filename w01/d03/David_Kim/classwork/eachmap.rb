@@ -1,7 +1,6 @@
 # Create an array of strings by letting the user input strings one at a time.
 
 puts "Write some random strings!"
-user_input = 0
 while user_input != 'q' && user_input != 'Q'
 user_input = gets.chomp
 first_array = []
