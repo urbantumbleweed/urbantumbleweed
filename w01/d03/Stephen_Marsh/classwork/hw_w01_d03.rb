@@ -17,7 +17,7 @@ def list_trains
 end
 
 def list_stations(subway_line, hash)
-	mta=hash
+	mta = hash
 	puts "The stops are:"
 	listed_stops = mta[subway_line].each do |ls|
 		puts ls 
