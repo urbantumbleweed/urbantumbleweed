@@ -27,6 +27,7 @@
 # puts "You have #{distance} stops left!"
 
 # #####Phase 2
+
 # - Two lines functionality (N and L)
 puts "Welcome to Line N and L"
 
@@ -38,13 +39,13 @@ gets_on_line = gets.chomp.downcase
 n = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"]
 l = ["8th Ave", "6th Ave", "Union Square", "3rd Ave", "1st Ave"]
 mta = {"n" => n , "l" => l}
-  if gets_on_line =="n"
-    puts n
-  elsif gets_on_line == "l"
-    puts l
-  else
-    puts "Please select N or L"
-  end
+if gets_on_line =="n"
+  puts n
+elsif gets_on_line == "l"
+  puts l
+else
+  puts "Please select N or L"
+end
 
 #   - The user should be able to enter the stop that they want to get on at
   puts "What stop would you like to get on at?"
@@ -67,15 +68,27 @@ if gets_off_line == "n"
  puts "What stop do you want to get off at?"
   gets_off_stop = gets.chomp
 
+# Define method to find index of Union Square based on line
+
+def index_of_union_square(line_id, mta)
+  line = mta[line_id]
+  union_square_index = line.index("Union Square")
+  return union_square_index
+end
+
 #   - The user should be told the number of stops for their trip
   puts mta[gets_on_line].index(gets_on_stop)
    if gets_off_line == gets_on_line
    number_of_stops = mta[gets_off_line].index(gets_off_stop) - mta[gets_on_line].index(gets_on_stop)
    final_stop = number_of_stops.abs
     puts "You have #{final_stop} stops left!"
+
+  elsif
+   gets_off_stop != gets_on_stop
+   number_of_stops = (mta[gets_off_line].index(gets_off_stop) - index_of_union_square(gets_off_line, mta)) + (index_of_union_square(gets_on_line, mta) - mta[gets_on_line].index(gets_on_stop))
+   final_stop = number_of_stops.abs
+    puts "You have #{final_stop} stops left!"
   end
-# elsif
-#   gets_off_stop != gets_on_stop
 
 
 
