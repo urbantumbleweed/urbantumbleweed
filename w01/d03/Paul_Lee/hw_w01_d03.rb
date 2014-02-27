@@ -23,6 +23,11 @@ line_off = gets.chomp.downcase.to_s
 puts "Which STOP do you want to get OFF at? #{mta[line_off]}"
 stop_off = gets.chomp.downcase.to_s
 
+until mta[line_on].include?(stop_on)
+  puts "That stop is under construction. Which STOP are you getting on? #{mta[line_on]}"
+  stop_on = gets.chomp.downcase.to_s
+end
+
 def transfer_calc(mta, line_on, stop_on, line_off, stop_off)
   if mta[line_on].include?('us') && mta[line_on].include?('us')
     trip = ( (mta[line_on].index(stop_on) - mta[line_on].index('us') ).abs ) + ( (mta[line_off].index(stop_off) - mta[line_off].index('us') ).abs )
@@ -40,7 +45,4 @@ if line_on == line_off
 
 elsif mta.include?(line_on) && mta.include?(line_off)
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-
-else
-  puts "Sorry, that line is under construction"
 end
