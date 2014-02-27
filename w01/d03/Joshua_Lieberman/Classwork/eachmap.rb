@@ -1,9 +1,4 @@
 # Create an array of strings by letting the user input strings one at a time.
-a = []
-puts "Enter any one word you choose"
-user_input = gets.chomp
-a.push(user_input)
-
 # The user should be able to keep entering strings until he/she enters the string 'q'.
 
 # Create a new array whose elements are capitalized versions of the corresponding elements of the first array. (Go check out #capitalize in the Ruby docs!)
@@ -19,4 +14,33 @@ a.push(user_input)
 # --------------
 # Word 1 is Whale
 # Word 2 is Red
-# Word 3 is Fire
+# # Word 3 is Fire
+# def map(strings)
+# 	cap_strings = []
+# 	strings.each do |x|
+# 		cap_strings << x.capitalize
+# 	end
+# 	cap_strings.each do |x|
+# 		puts "#{x}"
+# 	end
+# end
+
+def loop_mth(result)
+	while result != "q"
+		puts "Enter string! When you're done, enter 'q'"
+		result = gets.chomp
+		strings = []
+		unless result == "q"
+			strings << result
+		end
+	end
+	cap_strings = []
+	strings.each do |x|
+		cap_strings << x.capitalize
+	end
+	cap_strings.each do |x|
+		puts "#{x}"
+	end
+end
+
+loop_mth(1)

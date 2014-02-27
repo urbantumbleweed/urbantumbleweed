@@ -1,10 +1,12 @@
 # Create an array of strings by letting the user input strings one at a time.
-a = []
-puts "Enter any one word you choose"
-user_input = gets.chomp
-a.push(user_input)
-
 # The user should be able to keep entering strings until he/she enters the string 'q'.
+user_strings = []
+
+while input != "q"
+  puts "Input a string!"
+  input = gets.chomp
+  user_strings << input
+end
 
 # Create a new array whose elements are capitalized versions of the corresponding elements of the first array. (Go check out #capitalize in the Ruby docs!)
 

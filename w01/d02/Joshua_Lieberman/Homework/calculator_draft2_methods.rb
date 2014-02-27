@@ -43,7 +43,7 @@
 	end
 
 	def exp(num1, num2)
-		ans = num1 ^ num2
+		ans = num1 ** num2
 	end
 
 	def cos(num1)
