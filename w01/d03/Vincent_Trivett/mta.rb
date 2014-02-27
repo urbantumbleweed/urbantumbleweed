@@ -2,66 +2,67 @@ puts "three lines!!"
 
 subway = {"n" => ['ts', '34th', '28th-n', '23rd-n', 'us', "8th"], "l" => ['8th', '6th', 'us', '3rd', '1st'], "s" => ['gc', '33rd', '28th-s', '23rd-s', 'us']}
 
-nline = (subway.select{|k,v| k == "n"}).values.flatten
-lline = (subway.select{|k,v| k == "l"}).values.flatten
-sline = (subway.select{|k,v| k == "s"}).values.flatten
+nline = subway["n"]
+lline = subway["l"]
+sline = subway["s"]
 
 puts "which line do you want to board? N, S or L?"
 startline_input = gets.chomp.downcase
 startline = nil
 endline = nil
 
-if startline_input == "l"
-  startline = lline
-  puts "\n Here are stations on the L"
-  lline.each do |x|
+present_station = "\nHere are the stations on the "
+
+def list_stations(line)
+  line.each do |x|
     puts x
   end
+end
+
+if startline_input == "l"
+  startline = lline
+  puts present_station + "L"
+  list_stations(lline)
   elsif
     startline_input == "n"
       startline = nline
-      puts "\n Here are stations on the N"
-      nline.each do |x|
-      puts x
-    end
+      puts present_station + "N"
+      list_stations(nline)
   elsif
   startline_input == "s"
     startline = sline
-    puts "\n Here are stations on the \'S\'"
-    sline.each do |x|
-    puts x
-  end
+    puts present_station + "\'S\'"
+    list_stations(sline)
+
   else
     puts "error"
     exit
 end
 
+
 puts "where would you like to get on?"
 start = gets.chomp
 
-puts "from which line will you disembark?"
+puts "from which line will you disembark? N, S or L?"
 endline_input = gets.chomp.downcase
+
+
+
 
 if endline_input == "l"
   endline = lline
-  puts "\n Here are stations on the L"
-  lline.each do |x|
-    puts x
-  end
+  puts present_station + "L"
+  list_stations(lline)
   elsif
     endline_input == "n"
       endline = nline
-      puts "\n Here are stations on the N"
-      nline.each do |x|
-      puts x
-    end
+      puts present_station + "N"
+      list_stations(nline)
     elsif
     endline_input == "s"
       endline = sline
-          puts "\n Here are stations on the \'S\'"
-      sline.each do |x|
-      puts x
-    end
+      puts present_station + "\'S\'"
+      list_stations(sline)
   else
     puts "error"
     exit
