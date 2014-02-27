@@ -21,7 +21,7 @@ stop2 = 0
 
 #Phase one
 
-#Phase 2 
+#Ask for user input, subway lines and stop, Ending line and stop.
 
 	puts "Please enter your starting subway line: #{mta.keys.join(", ")}"
 	start_line = gets.chomp
@@ -35,6 +35,7 @@ stop2 = 0
 	puts "Please enter the stop you want to get off at #{mta[end_line].join(", ")}"
 	end_stop = gets.chomp
 
+# Calculate the total stops method if using more than one line
 def transfer(subway, startl, start_stop, endl, end_stop)
 
 
@@ -46,7 +47,7 @@ def transfer(subway, startl, start_stop, endl, end_stop)
 
 end
 
-
+#Determine wether to calculate multiple lines or just one line and return stops
 if end_line != start_line
 
 	totstop = transfer(mta, start_line, start_stop, end_line, end_stop)
@@ -60,9 +61,3 @@ elsif
 	puts "You have gone #{stop1} stops"
 
 end
-
-
-
-
-
-
