@@ -1,19 +1,24 @@
 subway_system = {"n" => ["ts", "34th", "28th-n", "23rd-n", "us", "8th"], "l" => ["8th", "6th", "us", "3rd", "1st"], "6" => ["gc", "33rd", "28th-s","23rd-s", "us", "astor"], "1" => ["59th", "50th", "ts", "34th-1", "28th-1"]}
 
+# Prints subway line options for user, gets option and returns user input
 def prints_which_subway
   puts "Which subway line would you like to take? You can choose the n, l, 6, or 1."
   subway_line = gets.chomp
   return subway_line
 end
 
+# print subway line map based on what line user chose in method prints_which_subway. var comes from method prints_which_subway
 def print_menu(var)
   subway_system = {"n" => ["ts", "34th", "28th-n", "23rd-n", "us", "8th"], "l" => ["8th", "6th", "us", "3rd", "1st"], "6" => ["gc", "33rd", "28th-s","23rd-s", "us", "astor"], "1" => ["59th", "50th", "ts", "34th-1", "28th-1"]}
 
   puts "You are taking the (#{var}) subway line. We will figure out how many stops your trip will take. Please choose a starting station from the following list:"
-  print subway_system[var]
+  subway_system[var].each do |x|
+    puts x
+  end
   puts
 end
 
+# do two different subway lines intersect? if true, returns true
 def valid(a1, a2)
   result = false
   a1.each do |x|
@@ -49,7 +54,9 @@ else
       second_stop = gets.chomp
 
       if subway_system[user_subway_line].include? second_stop
+        # use method to calculate this
       journey = subway_system[user_subway_line].index(second_stop) - subway_system[user_subway_line].index(first_stop)
+
       puts "Your journey will take #{journey.abs} stops. Beware of smelly hobos."
       else
       puts "That's not a valid stop. You broke the internets."
@@ -61,6 +68,7 @@ else
 
       second_line_stop = gets.chomp
 
+      # use method for this calculation
       transfer_journey_first_leg = subway_system[user_subway_line].index(first_stop) - subway_system[user_subway_line].index("ts")
       transfer_journey_second_leg = subway_system[second_subway_line].index(second_line_stop) - subway_system[second_subway_line].index("ts")
       transfer_journey = transfer_journey_second_leg.abs + transfer_journey_first_leg.abs
@@ -76,6 +84,7 @@ else
       second_line_stop = gets.chomp
 
       if subway_system[second_subway_line].include? second_line_stop
+        # use method for this calculation
         transfer_journey_first_leg = subway_system[user_subway_line].index(first_stop) - subway_system[user_subway_line].index("us")
         transfer_journey_second_leg = subway_system[second_subway_line].index(second_line_stop) - subway_system[second_subway_line].index("us")
         transfer_journey = transfer_journey_first_leg.abs + transfer_journey_second_leg.abs
