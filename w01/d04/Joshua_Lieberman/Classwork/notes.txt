@@ -5,3 +5,17 @@ A Ruby symbol is a datatype that has both a number (integer) representation and 
 
 to use symbols in the hash, you don't need to use hashrockets
 animal_sounds = {dog: "woof"} is equivalent to {:dog => "woof"}
+
+File I/O
+Concepts
+	Explain the importanc and application of data persistence
+
+Mechanics
+	Read text from a file into Ruby
+	Wite information in Ruby to a text file
+
+File.open("file.txt", "r") do |f|
+	contents = f.gets
+
+args: (file to open, mode (r: read, w: write)) do |treat as file|
+action: code brings file into code
