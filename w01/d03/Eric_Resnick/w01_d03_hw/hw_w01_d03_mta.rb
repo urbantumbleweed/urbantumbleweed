@@ -21,8 +21,7 @@ if origin_line == 'N'
 	origin_station = n_arr[origin_num-1]
 	puts "You are starting at #{origin_station}. Where would you like to end?"
 	end_num = gets.chomp.to_i
-	end_station = n_arr[end_num-1]
-	puts "Your trip from #{origin_station} to #{end_station} contains "
+	end_station = n_arr[end_num-1]	
 
 elsif origin_line == 'L'
 	puts "Select an origin station"+l_arr.to_s
@@ -31,8 +30,7 @@ elsif origin_line == 'L'
 	puts "You are starting at #{origin_station}. Where would you like to end?"
 	end_num = gets.chomp.to_i
 	end_station = l_arr[end_num-1]
-	puts "Your trip from #{origin_station} to #{end_station} contains "
-	
+
 elsif origin_line == 'S'
 	puts "Select an origin station"+s_arr.to_s
 	origin_num = gets.chomp.to_i
@@ -40,8 +38,10 @@ elsif origin_line == 'S'
 	puts "You are starting at #{origin_station}. Where would you like to end?"
 	end_num = gets.chomp.to_i
 	end_station = s_arr[end_num-1]
-	puts "Your trip from #{origin_station} to #{end_station} contains "
 end
+
+
+puts "Your trip from #{origin_station} to #{end_station} contains "
 
 # origin_num = gets.chomp.to_i
 # origin_station = n_arr[origin_num-1]
