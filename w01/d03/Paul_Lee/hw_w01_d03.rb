@@ -39,30 +39,22 @@ if line_on == line_off
   puts "Your trip will take #{trip.abs} stops."
 
 elsif line_on == "n"
-  if line_off == "l"
-  elsif line_off == "six"
-  elsif line_off == "one"
+  if mta.include?(line_off)
   end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
 elsif line_on == "l"
-  if line_off == "n"
-  elsif line_off == "six"
-  elsif line_off == "one"
+  if mta.include?(line_off)
   end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
 elsif line_on == "six"
-  if line_off == "n"
-  elsif line_off == "l"
-  elsif line_off == "one"
+  if mta.include?(line_off)
   end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
 elsif line_on == "one"
-  if line_off == "l"
-  elsif line_off == "six"
-  elsif line_off == "n"
+  if mta.include?(line_off)
   end
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
 
