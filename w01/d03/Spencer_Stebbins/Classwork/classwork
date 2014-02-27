@@ -1,0 +1,13 @@
+x = []
+
+value = gets.chomp
+
+while value != "q"
+
+
+  puts "Enter: " + value
+  x.push value
+
+  else
+  puts "adios"
+end

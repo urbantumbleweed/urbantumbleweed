@@ -9,4 +9,3 @@ puts "Welcome to the Mad Lib Generator"
 
 # Print out the results to the user
 puts template
-
