@@ -21,6 +21,20 @@ puts "Enter a number between 1-7"
 
 num_select = gets.chomp.to_i
 
+##Alternative method
+# 
+# random_day = arr.sample
+# random_index = arr.index(random_day)
+#
+# if num_select <= 7 && >= 1
+#   message = "Day #{num_select} of the week is #{arr[num_select-1]}"
+#   puts(message)
+# else
+#   message = "Day #{random_index +1} of the week is #{random_day}."
+# 	puts(message)
+# end
+
+
 if num_select == 1
 	puts "Day 1 of the week is "+arr[0].to_s
 elsif num_select == 2
