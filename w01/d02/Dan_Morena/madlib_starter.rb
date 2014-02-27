@@ -1,6 +1,10 @@
 initializer = "start"
 puts "Welcome to the Mad Lib Generator"
 
+<<<<<<< HEAD
+=======
+#work
+>>>>>>> 69a6115a7f643f13df0b70928232ed81c5d8b52d
 
 # Prompt the user to enter different words
 
