@@ -30,6 +30,16 @@ def valid(a1, a2)
   return result
 end
 
+def transfer(first_line, second_line, first_stop, second_stop)
+  subway_system = {"n" => ["ts", "34th", "28th-n", "23rd-n", "us", "8th"], "l" => ["8th", "6th", "us", "3rd", "1st"], "6" => ["gc", "33rd", "28th-s","23rd-s", "us", "astor"], "1" => ["59th", "50th", "ts", "34th-1", "28th-1"]}
+
+    transfer_journey_first_leg = subway_system[first_line].index(first_stop) - subway_system[first_line].index("us")
+    transfer_journey_second_leg = subway_system[second_line].index(second_stop) - subway_system[second_line].index("us")
+    transfer_journey = transfer_journey_first_leg.abs + transfer_journey_second_leg.abs
+
+    returns "Your journey will take #{transfer_journey} stops. Beware of the smelly hobos."
+end
+
 user_subway_line = prints_which_subway
 
 if !subway_system.include? user_subway_line
@@ -65,15 +75,12 @@ else
     elsif valid(subway_system[user_subway_line], subway_system[second_subway_line]) && ( user_subway_line == "1" || second_subway_line == "1")
       puts "At what stop would you like to get off? Please choose from the following:"
       print subway_system[second_subway_line]
-      puts
+      puts ">"
 
       second_line_stop = gets.chomp
 
-      # use method for this calculation
-      transfer_journey_first_leg = subway_system[user_subway_line].index(first_stop) - subway_system[user_subway_line].index("ts")
-      transfer_journey_second_leg = subway_system[second_subway_line].index(second_line_stop) - subway_system[second_subway_line].index("ts")
-      transfer_journey = transfer_journey_second_leg.abs + transfer_journey_first_leg.abs
-      puts "Your journey will take #{transfer_journey.abs} stops. Beware of the smelly hobos."
+      puts trasnfer(subway_system[user_subway_line], first_stop, subway_system[second_subway_line], second_line_stop)
+
     elsif !valid(subway_system[user_subway_line], subway_system[second_subway_line])
       puts "Those two lines do not have a free transfer. Sorry. The dirty hobos have eaten you. Game over."
       exit
