@@ -13,6 +13,7 @@ mta["six"] = six
 mta["one"] = one
 
 #Phase 1 & 2 & 3 & 4 (attempt - could not get multiple transfers to work, but accounted for mutiple transfer points)
+
 puts "Which LINE are you getting ON at (N, L, SIX, or ONE)?"
 line_on = gets.chomp.downcase.to_s
 puts "Which STOP do you want to get ON at? #{mta[line_on]}"
@@ -23,18 +24,13 @@ line_off = gets.chomp.downcase.to_s
 puts "Which STOP do you want to get OFF at? #{mta[line_off]}"
 stop_off = gets.chomp.downcase.to_s
 
-until mta[line_on].include?(stop_on)
-  puts "That stop is under construction. Which STOP are you getting on? #{mta[line_on]}"
-  stop_on = gets.chomp.downcase.to_s
-end
-
-def transfer_calc(mta, line_on, stop_on, line_off, stop_off)
-  if mta[line_on].include?('us') && mta[line_on].include?('us')
-    trip = ( (mta[line_on].index(stop_on) - mta[line_on].index('us') ).abs ) + ( (mta[line_off].index(stop_off) - mta[line_off].index('us') ).abs )
-  elsif mta[line_on].include?('ts') && mta[line_on].include?('ts')
-    trip = ( (mta[line_on].index(stop_on) - mta[line_on].index('ts') ).abs ) + ( (mta[line_off].index(stop_off) - mta[line_off].index('ts') ).abs )
-  elsif mta[line_on].include?('34th') && mta[line_on].include?('34th')
-    trip = ( (mta[line_on].index(stop_on) - mta[line_on].index('34th') ).abs ) + ( (mta[line_off].index(stop_off) - mta[line_off].index('34th') ).abs )
+def transfer_calc(subway, first_line, first_stop, sec_line, sec_stop)
+  if subway[first_line].include?('us') && subway[sec_line].include?('us')
+    trip = ( (subway[first_line].index(first_stop) - subway[first_line].index('us') ).abs ) + ( (subway[sec_line].index(sec_stop) - subway[sec_line].index('us') ).abs )
+  elsif subway[first_line].include?('ts') && subway[sec_line].include?('ts')
+    trip = ( (subway[first_line].index(first_stop) - subway[first_line].index('ts') ).abs ) + ( (subway[sec_line].index(sec_stop) - subway[sec_line].index('ts') ).abs )
+  elsif subway[first_line].include?('34th') && subway[sec_line].include?('34th')
+    trip = ( (subway[first_line].index(first_stop) - subway[first_line].index('34th') ).abs ) + ( (subway[sec_line].index(sec_stop) - subway[sec_line].index('34th') ).abs )
   end
     puts "Your trip will take #{trip.abs} stops."
 end
@@ -45,4 +41,7 @@ if line_on == line_off
 
 elsif mta.include?(line_on) && mta.include?(line_off)
   transfer_calc(mta, line_on, stop_on, line_off, stop_off)
+
+else
+  puts "That line/stop is under construction. Because the MTA is ALWAYS under construction..."
 end
