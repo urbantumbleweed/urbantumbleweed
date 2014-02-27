@@ -64,6 +64,7 @@ puts "Please enter the stop you wish to go to:"
 ending_stop = gets.chomp
 
 stops = line[on_line].index(starting_stop) - line[on_line].index(ending_stop)
+
 amount_of_stops = stops.abs
 
 puts "It's #{amount_of_stops} stops!"
