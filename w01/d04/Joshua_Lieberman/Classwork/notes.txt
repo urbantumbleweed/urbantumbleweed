@@ -1,2 +1,7 @@
 %w( series of elements to turn into an array ) =
 ["series", "of", "elements", "to", "turn", "into", "an", "array"]
+
+A Ruby symbol is a datatype that has both a number (integer) representation and a string representation.
+
+to use symbols in the hash, you don't need to use hashrockets
+animal_sounds = {dog: "woof"} is equivalent to {:dog => "woof"}
