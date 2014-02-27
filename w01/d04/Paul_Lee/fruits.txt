@@ -3,3 +3,7 @@ kiwi
 strawberries
 tomato
 avocado
+bananas
+orange
+apple
+peach
