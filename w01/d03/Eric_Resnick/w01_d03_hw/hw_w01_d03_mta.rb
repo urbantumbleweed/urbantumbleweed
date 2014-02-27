@@ -17,15 +17,53 @@ sub_hash = {'N' => n_arr, 'L' => l_arr, 'S' => s_arr}
 
 if origin_line == 'N'
 	puts "Select an origin station"+n_arr.to_s
+	origin_num = gets.chomp.to_i
+	origin_station = n_arr[origin_num-1]
+	puts "You are starting at #{origin_station}. Where would you like to end?"
+	end_num = gets.chomp.to_i
+	end_station = n_arr[end_num-1]
+	puts "Your trip from #{origin_station} to #{end_station} contains "
+
 elsif origin_line == 'L'
 	puts "Select an origin station"+l_arr.to_s
+	origin_num = gets.chomp.to_i
+	origin_station = l_arr[origin_num-1]
+	puts "You are starting at #{origin_station}. Where would you like to end?"
+	end_num = gets.chomp.to_i
+	end_station = l_arr[end_num-1]
+	puts "Your trip from #{origin_station} to #{end_station} contains "
+	
 elsif origin_line == 'S'
 	puts "Select an origin station"+s_arr.to_s
+	origin_num = gets.chomp.to_i
+	origin_station = s_arr[origin_num-1]
+	puts "You are starting at #{origin_station}. Where would you like to end?"
+	end_num = gets.chomp.to_i
+	end_station = s_arr[end_num-1]
+	puts "Your trip from #{origin_station} to #{end_station} contains "
 end
 
-origin_station = gets.chomp
+# origin_num = gets.chomp.to_i
+# origin_station = n_arr[origin_num-1]
+
+# puts "You are starting at #{origin_station}. Where would you like to end?"
+
+# end_num = gets.chomp.to_i
+# end_station = n_arr[end_num-1]
 
 
+
+# puts "Your trip from #{origin_station} to #{end_station} contains "
+
+
+
+
+
+
+
+# origin_station = n_arr[origin_num-1]
+
+# puts origin_station
 
 
 
@@ -42,16 +80,16 @@ origin_station = gets.chomp
 # end
 
 
-def fav(*var)
-arr = []
-var.each do |x|
-puts "What's your favorite #{x}?"
-ans = gets.chomp.downcase
-arr << ans
-end
-all = arr.join(", ")
-puts "That's awesome! I love #{all} too!"
-end
+# def fav(*var)
+# arr = []
+# var.each do |x|
+# puts "What's your favorite #{x}?"
+# ans = gets.chomp.downcase
+# arr << ans
+# end
+# all = arr.join(", ")
+# puts "That's awesome! I love #{all} too!"
+# end
 
 
 # if origin_line == 'n'
@@ -61,29 +99,9 @@ end
 # elsif origin_line == '6'
 # 	puts s_arr
 # end
-	
-
-# puts "Enter the stop you want to start at"
-# 	start_point = gets.chomp
-
-# puts "Enter the stop you want to start at"
-# 	start_point = gets.chomp
-
-# puts "Enter the stop you want to get off at"
-# 	end_point = gets.chomp
-
-# puts "Enter the line you would like to take"
-
-# a.
 
 # line_choice = gets.chomp.upcase
 # 	puts =
-
-# n_arr = ['ts', '34th', '28th-n', '23rd-n', 'us', '8th-n']
-# l_arr = ['8th', '6th', 'us', '3rd', '1st']
-# s_arr = ['gc', '33rd', '28th-s', '23rd-s', 'us']
-
-# sub_hash = {'N' => n_arr, 'L' => l_arr, 'S' => s_arr}
 
 # random_day = arr.sample
 
