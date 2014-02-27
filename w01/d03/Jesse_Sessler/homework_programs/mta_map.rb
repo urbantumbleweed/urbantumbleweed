@@ -22,6 +22,15 @@ def valid_transfer?(first_stop_line, last_stop_line)
   first_stop_line.any? { |stop| last_stop_line.include?(stop) }
 end
 
+def subway_line_stop_choice(subway, stop)
+  puts "You're subway line choices are: #{subway.keys.join(', ')}"
+  stop_line = get_and_validate_input(subway.keys, "#{stop} stop line")
+  puts 'The stops on that line are: '
+  subway_menu(subway[stop_line])
+  stop = get_and_validate_input(subway[stop_line], "#{stop} stop")
+  [subway[stop_line], stop]
+end
+
 mta = {
   'n' => %w(ts 34th-n 28th-n 23rd-n us 8th-n),
   'l' => %w(8th-l 6th us 3rd 1st),
@@ -33,19 +42,11 @@ mta = {
 
 # phase 4
 #==================
-puts "You're subway line choices are: #{mta.keys.join(', ')}"
-first_stop_line = get_and_validate_input(mta.keys, 'first stop line')
-puts 'The stops on that line are: '
-subway_menu(mta[first_stop_line])
-first_stop = get_and_validate_input(mta[first_stop_line], 'first stop')
+first_choice = subway_line_stop_choice(mta, 'first')
+last_choice = subway_line_stop_choice(mta, 'last')
 
-last_stop_line = get_and_validate_input(mta.keys, 'last stop line')
-puts 'The stops on that line are: '
-subway_menu(mta[last_stop_line])
-last_stop = get_and_validate_input(mta[last_stop_line], 'last stop')
-
-if valid_transfer?(mta[first_stop_line], mta[last_stop_line])
-  puts "That'll be #{num_stops(mta[first_stop_line], first_stop, mta[last_stop_line], last_stop)} stop(s)."
+if valid_transfer?(first_choice.first, last_choice.first)
+  puts "That'll be #{num_stops(first_choice.first, first_choice.last, last_choice.first, last_choice.last)} stop(s)."
 else
   puts "Those lines don't have a stop to transfer at."
   puts "Consider taking a bus, taxi, or walking!"
