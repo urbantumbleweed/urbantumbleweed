@@ -36,14 +36,11 @@ def calculate_stops(depart_num, arrive_num)
   puts "Where are you getting off?"
   arrive = gets.chomp
 
-  # fix depart_num and arrive_num hash - array index
-  depart_num = @mta[:n][n.index(depart) + 1]
-  arrive_num = n.index(arrive) + 1
+  depart_num = @mta[:n].index(depart).abs
+  arrive_num = @mta[:n].index(arrive).abs
 
-  if n.index(depart) > n.index(arrive)
+  if depart_num != arrive_num
     stops = depart_num - arrive_num
-  elsif
-    stops = arrive_num - depart_num
   else
     puts "Are you sure? That's the same stop."
   end
