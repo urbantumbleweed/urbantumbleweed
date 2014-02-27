@@ -3,20 +3,45 @@ runner = "start"
 
 while runner != "n"
 
-  n_train = ["tsq","34th","28th", "23rd-n", "usq", "8th"]
+  n = ["ts","34th","28th", "23rd-n", "us", "8th"]
+  l = ["8th", "6th", "us", "3rd", "1st"]
 
-  puts "Here are the stops on the N line:"
-  n_train.each {|x| puts x}
+  mta = { n: n , l: l }
+
+  puts "Which line, N or L, do you want to get ON?"
+  on_train = gets.chomp
+
+  puts "Here are the stops on the #{on_train.upcase} line:"
+
+  mta[on_train.downcase.to_sym].each do |a|
+    puts a
+  end
+
   puts "Which stop do you want to get ON?"
   on_stop = gets.chomp
+
+  puts "Which line, N or L, do you want to get OFF?"
+  off_train = gets.chomp
+
+  puts "Here are the stops on the #{off_train.upcase} line:"
+  mta[off_train.downcase.to_sym].each {|a| puts a}
+
   puts "Which stop do you want to get OFF?"
   off_stop = gets.chomp
 
-  def numStops( x , y)
+  # puts on_train, on_stop, off_train, off_stop
+
+  def numStops( x , y )
     (x - y).abs
   end
 
-  number_of_stops = numStops( n_train.index( on_stop ) , n_train.index( off_stop ))
+  if on_train == off_train
+    number_of_stops = numStops( mta[on_train.downcase.to_sym].index( on_stop ) , mta[on_train.downcase.to_sym].index( off_stop ) )
+  else
+    leg_one = numStops( mta[on_train.downcase.to_sym].index( on_stop ) , mta[on_train.downcase.to_sym].index("us") )
+    leg_two = numStops( mta[off_train.downcase.to_sym].index( off_stop) , mta[off_train.downcase.to_sym].index("us") )
+    number_of_stops = leg_one + leg_two
+  end
 
   puts "It will take you #{number_of_stops} stop(s) to get from #{on_stop} to #{off_stop}!"
 
