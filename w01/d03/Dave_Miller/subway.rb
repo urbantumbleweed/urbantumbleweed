@@ -3,12 +3,13 @@ runner = "start"
 
 while runner != "n"
 
-  n = ["ts","34th","28th", "23rd-n", "us", "8th"]
+  n = ["ts","34th","28th-n", "23rd-n", "us", "8th"]
   l = ["8th", "6th", "us", "3rd", "1st"]
+  s = ["gc", "33rd", "28th-s", "23rd-s", "us", "astor"]
 
-  mta = { n: n , l: l }
+  mta = { n: n , l: l , s: s }
 
-  puts "Which line, N or L, do you want to get ON?"
+  puts "Which line, N, L, or S, do you want to get ON?"
   on_train = gets.chomp
 
   puts "Here are the stops on the #{on_train.upcase} line:"
