@@ -94,8 +94,8 @@ def transfers(subway,start,get_on,stop,get_off)
 		first_leg = (subway[start].find_index(get_on) - subway[start].find_index("unionsquare")).abs 
 		second_leg = (subway[stop].find_index(get_off) - subway[stop].find_index("unionsquare")).abs
 		num_stops = first_leg + second_leg
-		return "That will be #{num_stops} stops!"
 	end
+	return "That will be #{num_stops} stops!"
 end
 
 multiple_transfers
