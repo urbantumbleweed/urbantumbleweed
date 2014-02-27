@@ -7,8 +7,8 @@ def num_stops(first_stop_line, first_stop, last_stop_line, last_stop)
     (first_stop_line.index(first_stop) - first_stop_line.index(last_stop)).abs
   else
     transfer_stop = (first_stop_line & last_stop_line).first
-    stops1 = (first_stop_line.index(first_stop) - first_stop_line.index(transfer_stop)).abs
-    stops1 + (last_stop_line.index(transfer_stop) - last_stop_line.index(last_stop)).abs
+    stops = (first_stop_line.index(first_stop) - first_stop_line.index(transfer_stop)).abs
+    stops + (last_stop_line.index(transfer_stop) - last_stop_line.index(last_stop)).abs
   end
 end
 
@@ -41,21 +41,20 @@ mta = {
 # running code:
 
 # phase 4
-#==================
+# ==================
 first_choice = subway_line_stop_choice(mta, 'first')
 last_choice = subway_line_stop_choice(mta, 'last')
 
 if valid_transfer?(first_choice.first, last_choice.first)
   puts "That'll be #{num_stops(first_choice.first, first_choice.last, last_choice.first, last_choice.last)} stop(s)."
 else
-  puts "Those lines don't have a stop to transfer at."
-  puts "Consider taking a bus, taxi, or walking!"
+  puts "Those lines don't have a stop to transfer at. Consider taking a bus, taxi, or walking!"
 end
 
-# methods / var names may no longer apply
+# methods / var names may no longer apply to other phases
 
 # phase 1
-#==================
+# ==================
 # puts 'This is the N Line. Select stops using their names.'
 # subway_menu(mta['n'])
 # first_stop = get_stop(mta['n'], 'first stop')
@@ -63,7 +62,7 @@ end
 # puts "That'll be #{num_stops(mta['n'], first_stop, last_stop)} stop(s)."
 
 # phase 2 / phase 3
-#==================
+# ==================
 # puts "You're subway line choices are: #{mta.keys.join(', ')}"
 # first_stop_line = get_and_validate_input(mta.keys, 'first stop line')
 # puts 'The stops on that line are: '
