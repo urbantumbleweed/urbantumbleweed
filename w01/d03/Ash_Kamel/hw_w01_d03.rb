@@ -11,10 +11,10 @@ w = ['59th', '50', 'Times Square', '34th', '28th'] #bonus-time
 
 mta = {}
 
-mta["n"] = n
-mta["l"] = l
-mta["s"] = s
-mta["w"] = w
+mta["N"] = n
+mta["L"] = l
+mta["Six"] = s
+mta["One"] = w
 
 start_line = ""
 end_line = ""
@@ -51,7 +51,7 @@ def transfer(subway, startl, start_stop, endl, end_stop)
 
 end
 
-#Bonus Phase 3 Count number of stops for 1 line
+#Bonus Phase 4 Count number of stops for 1 line
 def onelinestops(subway, startl, start_stop, endl, end_stop)
 
 	tsq1 = subway[startl].index("Times Square") 
