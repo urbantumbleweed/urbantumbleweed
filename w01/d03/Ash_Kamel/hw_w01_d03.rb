@@ -1,5 +1,8 @@
-#MTA APP
-
+# ----------------------------------------------------------------------  
+# |                                                                    |
+# |                            MTA APP            					   |
+# |																	   |
+# ----------------------------------------------------------------------
 
 n = ['Times Square', '34th', '28th-n', '23rd-n', 'Union Square', '8th']
 l = ['8th Ave', '6th Ave', 'Union Square', '3rd Ave', '1st Ave']
@@ -18,9 +21,6 @@ end_stop = ""
 stop1 = 0
 stop2 = 0
 
-
-#Phase one
-
 #Ask for user input, subway lines and stop, Ending line and stop.
 
 	puts "Please enter your starting subway line: #{mta.keys.join(", ")}"
@@ -36,12 +36,14 @@ stop2 = 0
 	end_stop = gets.chomp
 
 # Calculate the total stops method if using more than one line
+# Phase 2 and 3
 def transfer(subway, startl, start_stop, endl, end_stop)
 
+	usq1 = subway[startl].index("Union Square") 
 
-	usq = subway[startl].index("Union Square") 
+	usq2 = subway[endl].index("Union Square")
 
-	totstop = ((subway[startl].index(start_stop) - usq) + (subway[endl].index(end_stop) - usq)).abs
+	totstop = ((subway[startl].index(start_stop) - usq1).abs + (subway[endl].index(end_stop) - usq2).abs)
 
 	return totstop
 
@@ -54,7 +56,7 @@ if end_line != start_line
 
 	puts "You have gone #{totstop} stops"
 
-elsif 
+elsif   #Phase 1
 
 	stop1 = (mta[start_line].index(start_stop) - mta[start_line].index(end_stop)).abs
 
