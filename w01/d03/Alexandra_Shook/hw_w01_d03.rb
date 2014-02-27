@@ -1,56 +1,44 @@
-n = ['ts', '34th', '28th-n', '23rd-n', 'us']
-l = ['8th', '6th', 'us', '3rd', '1st']
-# s = ['gc', '33rd', '28th-s', '23rd-s', 'us']
-# mta = {}
-# mta[:n] = n
-# mta[:l] = l
-# mta[:s] = s
+# build in ability to change lines - shortest path?
+# needs general clean up
 
-# Two lines functionality (N and L)
-# The user should be asked what line they want to get on
-# The user should be given a list of all the stops on that line
-# The user should be able to enter the stop that they want to get on at
-# The user should be asked what line they want to get off
-# The user should be given a list of all the stops on that line
-# The user should be able to enter the stop that they want to get off at
-# The user should be told the number of stops for their trip
+@mta = {
+  :n => ['ts', '34th', '28th-n', '23rd-n', 'us-n'],
+  :l => ['8th', '6th', 'us-l', '3rd', '1st'],
+  :s => ['gc', '33rd', '28th-s', '23rd-s', 'us-s']
+}
 
 puts "Welcome to the New York City Subway. Please choose a subway line."
+
 puts "Choose the N, L or 6."
-line = gets.chomp.upcase
-while line != "N" && line != "L" && line != "6"
-  puts "Please choose the N, L or 6."
-  line = gets.chomp.upcase
+@line = gets.chomp.upcase
+
+def choose_line
+  while (@line != "N") && (@line != "L") && (@line != "6")
+    puts "Choose the N, L or 6."
+    @line = gets.chomp.upcase
+  end
+
+  puts "Great. It stops at: "
+  if @line == "N"
+    puts @mta[:n]
+  elsif @line == "L"
+    puts @mta[:l]
+  else
+    puts @mta[:s]
+  end
 end
 
-
-# def ask(line)
-#   puts "Please enter choose a #{line}:"
-#   line = gets.chomp.upcase
-# end
-
-# N = ask("N")
-# L = ask("L")
-# six = ask("6")
-
-
-
-if line == "N"
-  puts "This is the N train. It stops at: "
-  puts n
-else
-  puts "This is the L train. It stops at: "
-  puts l
-end
+puts choose_line
 
 def calculate_stops(depart_num, arrive_num)
-  depart_num = n.index(depart) + 1
-  arrive_num = n.index(arrive) + 1
-
   puts "where are you getting on?"
   depart = gets.chomp
   puts "Where are you getting off?"
   arrive = gets.chomp
+
+  # fix depart_num and arrive_num hash - array index
+  depart_num = @mta[:n][n.index(depart) + 1]
+  arrive_num = n.index(arrive) + 1
 
   if n.index(depart) > n.index(arrive)
     stops = depart_num - arrive_num
@@ -61,4 +49,4 @@ def calculate_stops(depart_num, arrive_num)
   end
 end
 
-puts "That's #{stops} stops!"
+puts calculate_stops(1, 3)
