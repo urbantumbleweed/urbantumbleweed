@@ -7,12 +7,14 @@
 n = ['Times Square', '34th', '28th-n', '23rd-n', 'Union Square', '8th']
 l = ['8th Ave', '6th Ave', 'Union Square', '3rd Ave', '1st Ave']
 s = ['Grand Central', '33rd', '28th-s', '23rd-s', 'Union Square', 'Astor Place']
+w = ['59th', '50', 'Times Square', '34th', '28th'] #bonus-time
 
 mta = {}
 
 mta["n"] = n
 mta["l"] = l
 mta["s"] = s
+mta["w"] = w
 
 start_line = ""
 end_line = ""
@@ -49,17 +51,34 @@ def transfer(subway, startl, start_stop, endl, end_stop)
 
 end
 
+#Bonus Phase 3 Count number of stops for 1 line
+def onelinestops(subway, startl, start_stop, endl, end_stop)
+
+	tsq1 = subway[startl].index("Times Square") 
+
+	tsq2 = subway[endl].index("Times Square")
+
+	totstop1 = ((subway[startl].index(start_stop) - tsq1).abs + (subway[endl].index(end_stop) - tsq2).abs)
+
+	return totstop1
+
+end
 #Determine wether to calculate multiple lines or just one line and return stops
-if end_line != start_line
+if 	end_line != start_line && (end_line && start_line != "w")
 
 	totstop = transfer(mta, start_line, start_stop, end_line, end_stop)
 
 	puts "You have gone #{totstop} stops"
 
-elsif   #Phase 1
+elsif  start_line == end_line#Phase 1
 
 	stop1 = (mta[start_line].index(start_stop) - mta[start_line].index(end_stop)).abs
 
 	puts "You have gone #{stop1} stops"
+else #end_line != start_line && (end_line && start_line != "w")
+
+	totstop1 = transfer(mta, start_line, start_stop, end_line, end_stop)
+
+	puts "You have gone #{totstop1} stops"
 
 end
