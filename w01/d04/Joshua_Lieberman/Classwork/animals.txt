@@ -1,4 +1,0 @@
-dogs
-cats
-kangaroos
-rats

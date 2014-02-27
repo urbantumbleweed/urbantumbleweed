@@ -1,6 +1,6 @@
-animals = ["dogs", "cats", "kangaroos", "rats"]
+animals = ["cats", "dogs", "monkeys", "elephants"]
 
-File.open("animals.txt", "w") do |f|
+File.open("animals.txt", "a") do |f|
 	animals.each do |animal|
 		f.puts(animal)
 	end
