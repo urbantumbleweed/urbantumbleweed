@@ -125,20 +125,18 @@ end
 
 # 8. Modify the method such that you can give it a 'correct response' to expect from the user. The method should behave as above, only now return true if the input matches the correct response, false otherwise.
 print ' > #8 '
-def joke_teller(joke)
+def joke8(joke, correct_response)
   puts joke
   user_input = gets.chomp
-  if user_input == "I don't know"
-    puts "Snarky comment."
-    return false
-  else
-    puts "You got my joke!"
+  if user_input ==  correct_response
     return true
+  else
+   return false
   end
 end
 
 hilarious_joke = "Dogs are always in the push-up position"
-joke_result = joke_teller(hilarious_joke)
+joke_result = joke_teller(hilarious_joke, "Response")
 
 if joke_result == true
   puts "great job!"
