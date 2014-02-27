@@ -36,6 +36,7 @@ def calculate_stops(depart_num, arrive_num)
   puts "Where are you getting off?"
   arrive = gets.chomp
 
+<<<<<<< HEAD
 #{mta[on_train].join(", ")}"
   depart_num = @mta[:"#{@line}"].index(depart)
   arrive_num = @mta[:"#{@line}"].index(arrive)
@@ -43,6 +44,13 @@ def calculate_stops(depart_num, arrive_num)
   if depart_num != arrive_num
     stops = depart_num - arrive_num
     return stops.abs
+=======
+  depart_num = @mta[:n].index(depart).abs
+  arrive_num = @mta[:n].index(arrive).abs
+
+  if depart_num != arrive_num
+    stops = depart_num - arrive_num
+>>>>>>> 69a6115a7f643f13df0b70928232ed81c5d8b52d
   else
     puts "Are you sure? That's the same stop."
   end
