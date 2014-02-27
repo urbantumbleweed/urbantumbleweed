@@ -1,3 +1,4 @@
+# I don't know why my GIT shows up to date when my online repo shows empty
 #fake mulitplication
 
 puts "Ready to multiply 2 numbers!"

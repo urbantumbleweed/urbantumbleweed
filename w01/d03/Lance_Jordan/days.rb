@@ -1,3 +1,4 @@
+# I don't know why my GIT shows up to date when my online repo shows empty
 days = ["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"]
 
 sun_value = days.shift

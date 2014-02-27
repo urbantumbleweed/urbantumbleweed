@@ -1,3 +1,4 @@
+# I don't know why my GIT shows up to date when my online repo shows empty
 # damn broken validator
 puts "you selected #{input_selection}"
   puts "there are #{num_stops} on this line"

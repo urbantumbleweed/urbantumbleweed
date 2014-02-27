@@ -1,3 +1,5 @@
+# I don't know why my GIT shows up to date when my online repo shows empty
+
 # This program calculates number of train stops between two points
 # method to validate user input
 #def validate(input_selection, num_stops, msg)
