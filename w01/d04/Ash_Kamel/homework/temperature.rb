@@ -10,13 +10,14 @@ def convert_to_fahrenheit(type, temp)
 		
 	elsif type == "F"
 
-		return type, temp
+		return(type, temp)
 	
 	else
 
 		return nil
 	
 	end
+
 end
 
 
@@ -53,7 +54,7 @@ def convert_to_celcius(type, temp)
 		
 	elsif type == "K"
 
-		return(type, temp)
+		return 
 	
 	else
 
