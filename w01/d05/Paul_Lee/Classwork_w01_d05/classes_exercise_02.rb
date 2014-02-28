@@ -70,6 +70,10 @@ class Pets
         return "#{@color} #{@name} who is #{@age} years old, just ate #{@food}! NOM NOM NOM!"
     end
 
+    def jump
+        return "#{@color} #{@name} who is #{@age} years old, just jumped!"
+    end
+
 end
 
 
