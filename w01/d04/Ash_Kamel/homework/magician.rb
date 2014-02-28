@@ -1,29 +1,27 @@
-person1 = {"David Copperfield" => "Metuchen"}
-person2 = {"Syphilis Rivendell" => "Brooklyn"}
-dog = {"Sparky" => "Manhattan"}
+person1 = {"name" => "David Copperfield", "home" => "Metuchen"}
+person2 = {"name" => "Syphilis Rivendell", "home" => "Brooklyn"}
+dog = {"name" => "Sparky", "home" => "Manhattan"}
 
 def say_persons_name(person)
 
-	person.each do |key, value|
-	puts "Hi #{key} I see you are from #{value}"
-	end
-
+	
+	puts "Hi #{person["name"]} I see you are from #{person["home"]}"
+	
+	
 end
 
 
 def say_dogs_name(name)
 
-	name.each do |key, value|
-	puts "Woof! #{key} Woof!"
-	end
+	puts "Woof! #{name["name"]} Woof!"
+	
 
 end
 
 def do_magic(object)
 
-	object.each do |key, value|
-	puts "Hi, your name is #{key} that is an awesome magic trick"
-	end
+	
+	puts "Hi, your name is #{object["name"]} that is an awesome magic trick"
 
 end 
 
