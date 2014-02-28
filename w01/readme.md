@@ -4,8 +4,8 @@
 
 |                    | Monday | Tuesday | Wednesday | Thursday | Friday |
 |:----------         |:-----  |:-----   |:---       |:---      |:---    |
-| Morning            | Mental Models, Computer Effectiveness, Command Line| Intro to Ruby, Datatypes, Variables, pry | Collections & Enumeration | String Manipulation & Regex | Objects |
-| Afternoon          | Git, GitHub | Control Flow | Methods | Multi-file Ruby | Objects, Classes, Inheritance |
+| Morning            | Mental Models, Computer Effectiveness, Command Line| Intro to Ruby, Datatypes, Variables, pry | Collections & Enumeration | Methods | Objects |
+| Afternoon          | Git, GitHub | Control Flow | Methods | File I/O with Ruby | Objects, Classes, Inheritance |
 
 
 ### 1-on-1 Schedule
