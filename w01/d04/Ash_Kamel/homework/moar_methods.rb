@@ -42,23 +42,48 @@
 # puts sw_array(num_array, wild_card)
 
 
-#Excercise 5
+# #Excercise 5
+# num_array = [1, 3, 5, 6, 8]
+# wild_card = 10
+# wild_card2 = 11
+
+# def sw_array(array, wd, index)
+
+# 	if array.length % 2 == 0
+
+# 		return nil
+# 	else
+
+# 	array[index] = wd
+
+# 	return puts array
+
+# 	end	
+
+# end
+
+# puts sw_array(num_array, wild_card, wild_card2)
+
+
+#Excercise 6
 num_array = [1, 3, 5, 6, 8]
 wild_card = 10
-wild_card2 = 11
+wild_card2 = "hi"
 
 def sw_array(array, wd, index)
 
-	if array.length % 2 == 0
+	if array.is_a?(Array) && index.is_a?(Integer)
 
-		return nil
+		array[index] = wd
+
+		return puts array
+
 	else
-
-	array[index] = wd
-
-	return puts array
+		
+		 return "False"
 
 	end	
+
 
 end
 
