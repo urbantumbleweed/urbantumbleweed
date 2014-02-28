@@ -1,0 +1,8 @@
+pineapple
+mango
+kiwi
+tomato
+banana
+apple
+orange
+peach
