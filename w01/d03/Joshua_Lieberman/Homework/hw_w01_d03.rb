@@ -9,7 +9,6 @@ mta[:l] = l
 mta[:s] = s
 mta[:o] = o
 
-
 def list_trains
 	puts "N Train > 'n'"
 	puts "L Train > 'l'"

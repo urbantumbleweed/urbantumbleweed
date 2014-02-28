@@ -20,3 +20,4 @@ a.push(user_input)
 # Word 1 is Whale
 # Word 2 is Red
 # Word 3 is Fire
+
