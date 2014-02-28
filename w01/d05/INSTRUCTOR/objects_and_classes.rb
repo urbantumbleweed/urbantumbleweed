@@ -33,32 +33,29 @@
 
 # Monkey Problem
 
-class Monkey
-  attr_accessor(:name, :continent, :foods_eaten)
+# class Monkey
+#   attr_accessor(:name, :continent, :foods_eaten)
 
-  def initialize(initial_name, initial_continent)
-    @name = initial_name
-    @continent = initial_continent
-    @foods_eaten = []
-  end
+#   def initialize(initial_name, initial_continent)
+#     @name = initial_name
+#     @continent = initial_continent
+#     @foods_eaten = []
+#   end
 
-  def eat(food)
-    @foods_eaten << food
-  end
+#   def eat(food)
+#     @foods_eaten << food
+#   end
 
-  def climb
-    random_height = rand(100)
-    puts("I'm climbing up to #{random_height} meters")
-  end
+#   def climb
+#     random_height = rand(100)
+#     puts("I'm climbing up to #{random_height} meters")
+#   end
 
-end
+# end
 
-my_monkey = Monkey.new("Charlie", "South America")
-my_monkey.eat("banana")
-my_monkey.climb
-
-# Pets Code-Alone
-
+# my_monkey = Monkey.new("Charlie", "South America")
+# my_monkey.eat("banana")
+# my_monkey.climb
 
 # Method Over-riding
 

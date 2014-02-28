@@ -14,7 +14,14 @@ class Cat
   end
 
   def add_friend(new_animal)
-    @friends << new_animal
+    if new_animal.class == Cat
+      puts("Yeah, I like #{new_animal.name}.")
+      @friends << new_animal
+      return true
+    else
+      puts("Human sacrifice, dogs and cats living together... mass hysteria!")
+      return false
+    end
   end
 
 end
