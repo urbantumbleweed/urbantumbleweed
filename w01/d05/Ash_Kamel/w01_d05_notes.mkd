@@ -1,0 +1,41 @@
+Adam Bray
+
+
+Learning Objectives
+---
+
+- Explain what Ojbects & Classes are , and how they relate
+- Write a lcass w/an intiialize method
+- Write setters & getters, explain instance variables
+-Explain when & how you use attr_accssor
+- Expain the use of self in Ruby
+-Instantiate and use objects
+-Explain inhertiance & write a class that uses it
+- Explain class variables & methods
+- Write classes & ojbects that interact
+
+
+methods are behaviors
+
+
+Classes when used as Class.net()  it has a built in initialize method
+
+Classes are a template for how things behave
+
+    It contains attributes and behaviors
+
+Objects
+
+
+
+instance variable
+
+
+require_relative() is a local call to a class file in the same directory
+
+
+
+
+
+
+
