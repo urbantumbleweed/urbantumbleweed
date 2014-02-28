@@ -19,19 +19,24 @@
 
 
 #Excercise 4
-num_array = [1, 3, 5, 6]
+num_array = [1, 3, 5, 6, 8]
+wild_card = 10
 
-def sw_array(array)
+def sw_array(array, wd)
 
 	if array.length % 2 == 0
 
-		return puts "There is no middle number"
+		return nil
 	else
 
-		array[array.length/2]
+	middle_index = array.length/2
+	
+	array[middle_index] = wd
+
+	return puts array
 
 	end	
 
 end
 
-puts sw_array(num_array)
+puts sw_array(num_array, wild_card)
