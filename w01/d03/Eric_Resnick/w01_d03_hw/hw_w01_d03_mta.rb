@@ -18,6 +18,7 @@ sub_hash = {'N' => n_arr, 'L' => l_arr, 'S' => s_arr}
 if origin_line == 'N'
 	puts "Select an origin station"+n_arr.to_s
 	origin_num = gets.chomp.to_i
+
 	origin_station = n_arr[origin_num-1]
 	puts "You are starting at #{origin_station}. Where would you like to end?"
 	end_num = gets.chomp.to_i
@@ -40,8 +41,15 @@ elsif origin_line == 'S'
 	end_station = s_arr[end_num-1]
 end
 
+num_stops = (origin_num - end_num).abs
 
-puts "Your trip from #{origin_station} to #{end_station} contains "
+puts "Your trip from #{origin_station} to #{end_station} contains #{num_stops} stops."
+
+
+
+#.find_index(origin_num)
+#.find_index()
+
 
 # origin_num = gets.chomp.to_i
 # origin_station = n_arr[origin_num-1]

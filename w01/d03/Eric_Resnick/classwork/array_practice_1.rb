@@ -23,7 +23,7 @@ num_select = gets.chomp.to_i
 
 
 ##Alternative method
-# 
+
 # random_day = arr.sample
 # random_index = arr.index(random_day)
 #
