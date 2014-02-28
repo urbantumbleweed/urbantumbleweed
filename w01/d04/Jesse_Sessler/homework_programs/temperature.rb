@@ -20,7 +20,7 @@ end
 def from_kelvin(unit, temp)
   if unit == 'f'
     (temp - 273.15) * 9 / 5 + 32
-  elsif unit =='c'
+  elsif unit == 'c'
     temp - 273.15
   else
     temp
@@ -28,7 +28,7 @@ def from_kelvin(unit, temp)
 end
 
 def valid?(unit)
- %w[f c k].include?(unit)
+  %w[f c k].include?(unit)
 end
 
 def too_low?(temp)    # check if temp is below absolute zero
@@ -42,7 +42,7 @@ print "Unit you're converting from? "
 unit_from = gets.chomp.downcase
 print "Unit you're converting to? "
 unit_to = gets.chomp.downcase
-print "Temperature to convert? "
+print 'Temperature to convert? '
 temp = gets.chomp
 puts
 
