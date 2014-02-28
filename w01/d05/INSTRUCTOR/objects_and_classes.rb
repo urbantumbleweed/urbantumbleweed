@@ -1,24 +1,26 @@
 # Everything in ruby is an object
 
 
-# Movie Demo
-class Movie
+# # Movie Demo
+# class Movie
 
-  attr_accessor(:title, :length, :genre)
+#   attr_accessor(:title, :length, :genre)
 
-  def initialize(title, length)
-    @title = title
-    @length = length
-  end
+#   def initialize(title, length, genre)
+#     @title = title
+#     @length = length
+#     @genre = genre
+#   end
 
-  def info
-    return "#{@title} is a #{@genre} movie that is #{@length} minutes long"
-  end
+#   def info
+#     return "#{@title} is a #{@genre} movie that is #{@length} minutes long"
+#   end
 
-end
+# end
 
-dave_fav_movie = Movie.new("Fargo", 200)
-puts(dave_fav_movie.info)
+# dave_fav_movie = Movie.new("Fargo", 200, "Drama")
+
+# puts(dave_fav_movie.info)
 
 
 # "Fargo is a Drama that is 200 minutes long"
@@ -29,13 +31,31 @@ puts(dave_fav_movie.info)
 
 
 
+# Monkey Problem
 
+class Monkey
+  attr_accessor(:name, :continent, :foods_eaten)
 
-# Monkey Code-Alone
+  def initialize(initial_name, initial_continent)
+    @name = initial_name
+    @continent = initial_continent
+    @foods_eaten = []
+  end
 
+  def eat(food)
+    @foods_eaten << food
+  end
 
-# Inheritance (with movies)
+  def climb
+    random_height = rand(100)
+    puts("I'm climbing up to #{random_height} meters")
+  end
 
+end
+
+my_monkey = Monkey.new("Charlie", "South America")
+my_monkey.eat("banana")
+my_monkey.climb
 
 # Pets Code-Alone
 
