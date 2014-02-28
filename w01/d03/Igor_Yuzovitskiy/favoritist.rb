@@ -16,4 +16,3 @@ song = fav_food("song")
 movie = fav_food("movie")
 
 puts("That's awesome! I love #{food}, #{color}, #{song}, and #{movie}, too!")
-

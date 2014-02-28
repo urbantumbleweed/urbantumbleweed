@@ -45,7 +45,7 @@ l = ['8th', '6th', 'us', '3rd', '1st']
 puts "What train do you want to get on, N or L?"
 get_on_train = gets.chomp
 
-# Showing them what stops they get get on at.
+# Showing them what stops they can get get on at.
 #The user should be given a list of all the stops on that line
 if get_on_train == "n"
   puts n
@@ -71,3 +71,11 @@ end
 # The user should be able to enter the stop that they want to get off at
 puts "What stop do you want to get off at?"
 get_off_stop = gets.chomp
+
+def num_s(x,y)
+  (x-y).abs
+if get_on_train == get_off_train
+  diff = (n.index(get_on_train) - n.index(get_off_train)).abs
+puts diff
+elsif get_on_train != get_off_train
+  to_u = (n.index())
