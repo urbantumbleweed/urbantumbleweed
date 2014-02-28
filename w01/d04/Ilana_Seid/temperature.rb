@@ -23,19 +23,20 @@ puts "#{degree_celsius} degrees celsius is #{temp_output} in #{end_unit}."
 
 end
 
-# converter(4)
-puts "From what measurement are you converting from? kelvin (k) or fahrenheit (f) or celsius (c)?"
-unit_in = gets.chomp.downcase
+# bonus
 
-puts "To what measurement would you like to convert to? kelvin (k) or fahrenheit (f) or celsius (c)?"
-unit_out = gets.chomp.downcase
+# puts "From what measurement are you converting from? kelvin (k) or fahrenheit (f) or celsius (c)?"
+# unit_in = gets.chomp.downcase
 
-puts "Enter degree: "
-number_in = gets.chomp
+# puts "To what measurement would you like to convert to? kelvin (k) or fahrenheit (f) or celsius (c)?"
+# unit_out = gets.chomp.downcase
 
-def temp_convert(unit_in, unit_out, number_in)
-	if unit_in == unit_out
-		return number_in
-	elsif 
+# puts "Enter degree: "
+# number_in = gets.chomp
 
-end
+# def temp_convert(unit_in, unit_out, number_in)
+# 	if unit_in == unit_out
+# 		return number_in
+# 	elsif 
+# 		unit_in || unit_out)
+# end
