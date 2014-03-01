@@ -4,7 +4,7 @@ class Person
 	attr_reader(:age, :gender)
 	def initialize(name, age, gender, type)
 		@name = name
-		@age = age
+		@age = Time.new(Time.now() - age)
 		@gender = gender
 		@type = type	
 		@apartment = []
