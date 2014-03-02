@@ -84,7 +84,7 @@ while initializer != "q"
       clinton_towers.apartments.keys.sort.map { |key| print "Apt ", clinton_towers.apartments[key].apt_num, "\n" }
       puts
       print ">"
-      tenents_apartment = gets.chomp.downcase.upcase
+      tenents_apartment = gets.chomp.upcase
       puts
 
       #create the new tenent
