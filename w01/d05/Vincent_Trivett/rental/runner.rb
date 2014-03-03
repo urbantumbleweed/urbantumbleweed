@@ -1,6 +1,7 @@
 require_relative "apartment"
 require_relative "building"
 require_relative "person"
+require 'csv'
 
 puts "here are your options"
 
@@ -8,10 +9,22 @@ prompt = "(A) Add an apartment.\n(T) Add a tenant.\n(L) List the apartment direc
 
 home = Building.new("Dakota", "1 W. 72nd Street", 2, 4)
 
-apt1a = Apartment.new("1A", 0, 0, 0, 0, "empty")
-apt1b = Apartment.new("1B", 0, 0, 0, 0, "empty")
-apt2a = Apartment.new("2A", 0, 0, 0, 0, "empty")
-apt2b = Apartment.new("2B", 0, 0, 0, 0, "empty")
+
+#Name,Price,Square Feet,Beds,Baths,Occupant Name
+apt_csv = CSV.read('building_data.csv', :headers=>true)
+
+onea = apt_csv[0]
+oneb = apt_csv[1]
+twoa = apt_csv[2]
+twob = apt_csv[3]
+
+
+
+apt1a = Apartment.new("1A", onea[1], onea[2], onea[3], onea[4], onea[5])
+
+apt1b = Apartment.new("1B", oneb[1], oneb[2], oneb[3], oneb[4], oneb[5])
+apt2a = Apartment.new("2A", twoa[1], twoa[2], twoa[3], twoa[4], twoa[5])
+apt2b = Apartment.new("2B", twob[1], twob[2], twob[3], twob[4], twob[5])
 
 apt_list = [apt1a, apt1b, apt2a, apt2b]
 
@@ -22,7 +35,7 @@ apt_list = [apt1a, apt1b, apt2a, apt2b]
       end
     end
     File.open("building_data.csv", "w") do |f|
-      f.puts "Name,Price,Square Feet,Beds,Baths,Occupant Name"
+      f.puts "Name,Price,Sqft,Beds,Baths,Occupant_Name"
       apt_list.each do |e|
         f.puts "#{e.name},#{e.price},#{e.sqft},#{e.num_beds},#{e.num_baths},#{e.renter}"
       end
