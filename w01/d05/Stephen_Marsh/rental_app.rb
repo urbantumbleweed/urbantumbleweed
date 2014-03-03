@@ -7,17 +7,17 @@ wally = Person.new("Wally", "66", "M")
 englebert_humperdink = Person.new("Englebert Humperdink", "69", "M")
 
 
-one_a = Apartment.new("1A", 2000, 500, 2, 2, bob)
-two_a = Apartment.new("2A", 2000, 500, 2, 2, wally)
-three_a = Apartment.new("3A", 2000, 500, 2, 2, englebert_humperdink)
+apt_1a = Apartment.new("1A", 2000, 500, 2, 2, bob)
+apt_2a = Apartment.new("2A", 2000, 500, 2, 2, wally)
+apt_3a = Apartment.new("3A", 2000, 500, 2, 2, englebert_humperdink)
 
-mckibbin = Building.new("McKibbin Lofts", "255 McKibbin St.", 5, {"1A" => one_a, "2A" => two_a, "3A" => three_a,})
+mckibbin = Building.new("McKibbin Lofts", "255 McKibbin St.", 5, {"1A" => apt_1a, "2A" => apt_2a, "3A" => apt_3a})
 
 
 ### MENU METHODS ###
 
 def newperson  ## Just gets data for Person.new arguments
-		puts "** Adding New Tenant **"
+		puts "Adding New Tenant."
 		puts "What is tenant name?"
 		ten_name = gets.chomp
 		puts "What is tenant age?"
@@ -52,7 +52,6 @@ while user_choice != "q"
 		puts "Adding apartment to: #{mckibbin.name}."
 		newunit = mckibbin.add_apt
 		puts "Okay, we created #{newunit.name}, a #{newunit.num_beds} bedroom apartment for #{newunit.price} a month."
-		user_choice = menu
 
 	elsif user_choice == "t"
 		tenant = newperson 
@@ -63,22 +62,20 @@ while user_choice != "q"
 		apt_choice = gets.chomp
 
 		mckibbin.apartments[apt_choice].add_tenant(tenant)
-		
-		user_choice = menu
 
 	elsif user_choice == "d"
 		puts "Here is the building directory:"
 		mckibbin.apartments.each_value do |apt|
 			puts "Apt.: #{apt.name}, Tenant(s): #{apt.renter.name}"
 			end
-		user_choice = menu
 	elsif user_choice == "q"
 		exit
 	else
 		puts "I'm sorry I didn't understand that."
 		puts "Returning to menu."
-		user_choice = menu
 	end
+
+user_choice = menu
 
 end
 
