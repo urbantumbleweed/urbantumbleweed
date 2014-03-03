@@ -98,6 +98,7 @@ puts "\n============================="
 puts "| WDI Apartment Manager 1.0 |"
 puts "============================="
 puts "| Building: #{the_regency.name}"
+puts "| #{the_regency.address}"
 puts "============================="
 puts "\nApartments are named by number starting with the floor number"
 puts 'e.g. Floor 4, apt 1 is named 401'
