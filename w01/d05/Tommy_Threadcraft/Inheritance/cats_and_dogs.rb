@@ -10,7 +10,7 @@
 #     * ear_type
 #     * methods: bark
 
-class Dog
+class Dog < Pet 
 
     attr_accessor(:name, :color, :ear_type)
 
@@ -18,15 +18,20 @@ class Dog
         @name = name
         @color = color
         @ear_type = ear_type
+        @friends = []
     end
 
     def bark 
         puts "Wooof woof!"
-    end    
+    end   
+
+    def add_friend(new_animal)
+            @friends << new_animal
+    end 
 
 end
 
-class Cat
+class Cat < Pet
 
     attr_accessor(:name, :color:, :favorite_food)
     attr_reader(:friends)
