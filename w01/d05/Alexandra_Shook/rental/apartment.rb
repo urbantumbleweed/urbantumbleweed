@@ -2,17 +2,17 @@ require 'pry'
 
 class Apartment
 
-  attr_accessor :apt_name, :price, :sqft, :num_beds, :num_baths
-  attr_reader :renter
+  attr_accessor :apt_name, :price, :sqft, :num_beds, :num_baths, :renter
 
-  def initialize apt_name, price, sqft, num_beds, num_baths, renter
-    @apt_name = apt_name
-    @price = price
-    @sqft = sqft
-    @num_beds = num_beds
-    @num_baths = num_baths
+  def self.create(params = {})
+    @apt_name = params[:apt_name]
+    @price = params[:price]
+    @sqft = params[:sqft]
+    @num_beds = params[:num_beds]
+    @num_baths = params[:num_baths]
     @renter = []
   end
+
 
   def add_apt_params
 # hash.new? and then stick all these inside with symbols?
@@ -40,6 +40,9 @@ class Apartment
         puts "Choose an apartment to add the tenant to."
 # list the apartments
 
+        # @apartment_listings.each do |l|
+        #   puts l.apt_name
+        # end
         puts "Tenant name:"
         apt_add = gets.chomp
         p "Tenant added!"
@@ -51,7 +54,3 @@ class Apartment
     end
   end
 end
-
-# def add_tenant
-  # @tenants[:tenants] = person
-# end

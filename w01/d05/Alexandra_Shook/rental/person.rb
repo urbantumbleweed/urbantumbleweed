@@ -20,18 +20,4 @@ class Person
 
     puts "Tenant name #{@tenant_name}, age #{@age}, gender #{@gender} added!"
   end
-
-  # def add_renter(renter_name)
-  #   answer =""
-  #   while answer != "y"
-  #     puts "Do you want to add this apartment to the building? Y/N"
-  #     answer = gets.chomp.downcase
-  #     if answer == "y"
-  #       p "Apartment added!"
-  #       @apartment_listings << add_apt
-  #       p "#{@apartment_listings}"
-  #     else
-  #       p "You must add this apartment to proceed."
-  #     end
-
 end
