@@ -10,10 +10,8 @@ pauls_apt = Apartment.new("Turtle Den", 990, 450, 1, 1, paul)
 pats_apt = Apartment.new("Bull's House", 1000, 450, 1, 1, patrick)
 carlys_apt = Apartment.new("Porpous Palace", 650, 400, 1, 1, carly)
 
-new_building = Building.new("Ministry Apartments", "228 West General Assembly Street", 7)
-new_building.apartments.push(pauls_apt)
-new_building.apartments.push(pats_apt)
-new_building.apartments.push(carlys_apt)
+new_building = Building.new("Ministry Apartments", "228 West General Assembly Street", 5)
+new_building.apartment.push(pauls_apt, pats_apt, carlys_apt)
 
 #WHAT DO YOU WANT TO DO?
 puts " "
@@ -23,29 +21,42 @@ print ' > '
 user_input = gets.chomp.upcase.to_s
 
 while user_input != 'Q'
+
   #ADD APT TO BUILDING
   if user_input == 'A'
-    puts new_building.add_apartment(@apartments)
+    new_building.add_apartment
+    puts " "
     puts start_menu
     print ' > '
     user_input = gets.chomp.upcase.to_s
 
 #ADD TENANT
   elsif user_input == 'T'
-    puts new_building.add_tenant(@renter)
+    new_building.apartment.add_tenant
+    puts " "
+    puts start_menu
+    print ' > '
+    user_input = gets.chomp.upcase.to_s
 
 #LIST APT DIRECTORY
   elsif user_input == 'L'
+    puts " "
     puts "#{new_building.name} at #{new_building.address}"
     puts " "
-    new_building.apartments.each do |name, renter|
-      puts "Name: #{apartments.name}, Tenant: #{aparments.renter}"
+    new_building.apartment.each do |index|
+      puts " > Name: #{index.name}, Tenant: #{index[5].renter.name}"
       puts " "
     end
     puts start_menu
     print ' > '
     user_input = gets.chomp.upcase.to_s
 
-# QUIT FUNCTION
+  else
+    puts " "
+    puts "Sorry - that's feature is still being developed!"
+    puts " "
+    puts start_menu
+    print ' > '
+    user_input = gets.chomp.upcase.to_s
   end
 end

@@ -1,21 +1,35 @@
 class Building
-  attr_reader :name, :address, :num_floor, :apartments
+  attr_accessor :name, :address, :num_floor, :apartment, :new_apt
 
   def initialize(name, address, num_floors)
     @name = name
     @address = address
     @num_floors = num_floors
-    @apartments = []
+    @apartment = []
   end
 
-  def add_apartment new_apt
-    new_apt = []
-    puts "What are the details for the new apartment? (Name, Price, Square Footage, Bedrooms, Bathrooms, Renter)"
-    print ' > '
-    new_apt = gets.chomp
-    @apartments.push(new_apt)
+  def add_apartment
     puts " "
-    puts "Your new apartment has been added with the following details: #{new_apt}."
+    puts "What is the name of the new unit?"
+    print ' > '
+    name = gets.chomp
+    puts "How much does rent cost?"
+    print ' > '
+    price = gets.chomp
+    puts "Square footage?"
+    print ' > '
+    sqft = gets.chomp
+    puts "How many bedrooms?"
+    print ' > '
+    num_beds = gets.chomp
+    puts "How many bathrooms?"
+    print ' > '
+    num_baths = gets.chomp
+    puts "Who is the current tenant?"
+    print ' > '
+    renter = gets.chomp
+    new_apt = [name, price, sqft, num_beds, num_baths, renter]
+    @apartment.push(new_apt)
   end
 
   def list_apartments

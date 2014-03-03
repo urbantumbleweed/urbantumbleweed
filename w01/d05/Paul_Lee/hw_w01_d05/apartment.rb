@@ -1,5 +1,5 @@
 class Apartment
-  attr_reader :name, :price, :sqft, :num_beds, :num_baths, :renter
+  attr_accessor :name, :price, :sqft, :num_beds, :num_baths, :renter, :new_tenant
 
   def initialize(name, price, sqft, num_beds, num_baths, renter)
     @name = name
@@ -10,14 +10,19 @@ class Apartment
     @renter = []
   end
 
-  def add_tenant(new_tenant)
-    puts "What are the details for the new tenant? (Name, Age, Gender)"
-    print ' > '
-    new_tenant = gets.chomps
-    Person.new(new_tenant)
-    @renter.push(new_tenant)
+  def add_tenant
     puts " "
-    puts "Apartment '#{@name}' has been updated with a new tenant: #{new_tenant}. "
+    puts "What is the new tenant's name?"
+    print ' > '
+    name = gets.chomp
+    puts "How old is the tenant?"
+    print ' > '
+    age = gets.chomp
+    puts "What is the tenant's gender?"
+    print ' > '
+    gender = gets.chomp
+    new_tenant = [name, age, gender]
+    @renter.push(new_tenant)
   end
 
 end
