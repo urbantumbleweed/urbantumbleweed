@@ -24,15 +24,13 @@ apt_list = [apt1a, apt1b, apt2a, apt2b]
     File.open("building_data.csv", "w") do |f|
       f.puts "Name,Price,Square Feet,Beds,Baths,Occupant Name"
       apt_list.each do |e|
-        f.puts e.name,e.price,e.sqft,e.num_beds,e,num_baths,e.renter
+        f.puts e.name,e.price,e.sqft,e.num_beds,e.num_baths,e.renter
       end
     end
   end
 
-
 puts prompt
 input = gets.chomp.downcase
-
 
 while input != "q"
   if input == "a"
@@ -82,8 +80,6 @@ while input != "q"
       write(apt_list)
       puts prompt
       input = gets.chomp.downcase
-
-
 
   elsif input == "l"
     puts "Building info:\n #{home.name}, #{home.address}. \n Floors: #{home.num_floors}. Units: #{home.apartments}"
