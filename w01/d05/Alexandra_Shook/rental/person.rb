@@ -4,10 +4,10 @@ class Person
 
   attr_accessor :tenant_name, :age, :gender
 
-  def initialize tenant_name, age, gender
-    @tenant_name = tenant_name
-    @age = age
-    @gender = gender
+  def initialize(params = {})
+    @tenant_name = params[:tenant_name]
+    @age = params[:age]
+    @gender = params[:gender]
   end
 
   def add_tenant_params
@@ -17,7 +17,6 @@ class Person
     @age = gets.chomp
     puts "gender"
     @gender = gets.chomp
-
     puts "Tenant name #{@tenant_name}, age #{@age}, gender #{@gender} added!"
   end
 end
