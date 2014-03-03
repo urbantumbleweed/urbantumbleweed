@@ -1,0 +1,32 @@
+
+Unit: 1A
+ Price: $5000
+ Square feet: 0 
+ Number of beds: 3
+ Number of baths: 2
+ Occupant: George
+-------
+
+Unit: 1B
+ Price: $0
+ Square feet: 0 
+ Number of beds: 0
+ Number of baths: 0
+ Occupant: empty
+-------
+
+Unit: 2A
+ Price: $0
+ Square feet: 0 
+ Number of beds: 0
+ Number of baths: 0
+ Occupant: empty
+-------
+
+Unit: 2B
+ Price: $0
+ Square feet: 0 
+ Number of beds: 0
+ Number of baths: 0
+ Occupant: empty
+-------
