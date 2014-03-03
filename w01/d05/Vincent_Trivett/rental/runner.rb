@@ -15,10 +15,6 @@ apt2b = Apartment.new("2B", 0, 0, 0, 0, "empty")
 
 apt_list = [apt1a, apt1b, apt2a, apt2b]
 
-
-unless apt_list.count == home.apartments
-  puts "error"
-end
   def write(apt_list)
     File.open("directory.txt", "w") do |f|
       apt_list.each do |entry|
@@ -58,12 +54,6 @@ while input != "q"
 
     x = home.add_apartment(active)
 
-
-    #
-    #
-    #
-    #
-    #
     write(apt_list)
 
     puts prompt
