@@ -12,13 +12,14 @@ def first_question
   gets.strip.to_i
 end
 
-building = Building.new("WDI Building", "10 E. 21st Street", 20)
-
 puts "Rental Simulator App"
+
+building = Building.new("WDI Building", "10 E. 21st Street", 20)
 choice = first_question
 
 while choice != 4
   if choice == 1
+
     puts "Please provide information for new apartment:"
     puts "Name?"
     apt_name = gets.strip
@@ -33,9 +34,10 @@ while choice != 4
 
     apt = Apartment.new(apt_name, apt_price, apt_sqft, apt_num_beds, apt_num_baths)
     building.add_apt(apt)
-
     puts "Added successfully!"
+
   elsif choice == 2
+
     puts "Please provide information for new tenant:"
     puts "Name?"
     ten_name = gets.strip
@@ -61,7 +63,9 @@ while choice != 4
     apt_choice = gets.strip
     add_ten = Apartment.add_tenant(building, apt_choice, per)
     puts "Successfully added #{per.name} as the renter to #{apt_choice}." if add_ten
+
   elsif choice == 3
+
     puts "Apartment directory:"
     building.apartments.each do |apt|
       puts ""

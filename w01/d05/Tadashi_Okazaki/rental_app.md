@@ -64,5 +64,3 @@ You should determine what methods & behavior are needed for each of your objects
 
 #### Listing the apartments
 * List all of the apartments
-
-
