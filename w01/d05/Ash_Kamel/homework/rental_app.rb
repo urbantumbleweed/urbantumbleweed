@@ -61,7 +61,7 @@ while select != "q"
 
 	elsif select == "l" #Listing the Building Directory
 
-		puts "-----------Here is our Apartment Directory------------------"
+		puts "-----------Here is our Apartment Directory----------------"
 		
 		palisade.apartments.each do |aprt|
 
