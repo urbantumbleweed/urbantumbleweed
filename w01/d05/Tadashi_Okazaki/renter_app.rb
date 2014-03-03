@@ -74,7 +74,10 @@ while choice != 4
       puts "SqFt: #{apt.last.sqft} sqft"
       puts "Number of bedrooms: #{apt.last.num_beds}"
       puts "Number of bathrooms: #{apt.last.num_baths}"
-      puts apt.renter
+      puts "Renters:"
+      apt.last.renter.each do |person|
+        puts person.last.name + ", " + person.last.age + ", " + person.last.gender
+      end
       puts ""
     end
   end
